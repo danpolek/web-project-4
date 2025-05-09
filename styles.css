@@ -1,21 +1,20 @@
 /* Base Styles */
 body {
+  background-image:  url('https://sdmntprwestus2.oaiusercontent.com/files/00000000-debc-61f8-ada6-8fea8effe1f9/raw?se=2025-05-09T19%3A30%3A43Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=5cab1ff4-c20d-41dc-babb-df0c2cc21dd4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-09T05%3A18%3A23Z&ske=2025-05-10T05%3A18%3A23Z&sks=b&skv=2024-08-04&sig=r6e3MtvVxZCsFvixX96MD6NXFY/eayTdPa8/L6iQFTQ%3D');
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #fefaf1;
-  color: #333;
+  color: #000000;
   line-height: 1.6;
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
   box-sizing: border-box;
-  background-image: url('https://sdmntprwestus2.oaiusercontent.com/files/00000000-debc-61f8-ada6-8fea8effe1f9/raw?se=2025-05-08T21%3A26%3A57Z&sp=r&sv=2024-08-04&sr=b&scid=d46b4b50-f659-5854-85de-5ca18f34ddc2&skoid=b53ae837-f585-4db7-b46f-2d0322fce5a9&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T01%3A27%3A11Z&ske=2025-05-09T01%3A27%3A11Z&sks=b&skv=2024-08-04&sig=mADo0RJw2mgW5f9mY/8%2BiZXOXiKWe9T74W4AEgxE%2Bxk%3D);');
+  
 }
 
 /* Header */
 header {
-  background-color: #4b3e2e;
+  background-color: #145800;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -40,7 +39,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background-color: #6b5b4c;
+  background-color: #0b8400;
 }
 
 /* Images */
@@ -75,7 +74,7 @@ iframe {
 
 /* Footer */
 footer {
-  background-color: #4b3e2e;
+  background-color: #145800;
   color: white;
   text-align: center;
   padding: 1rem;
