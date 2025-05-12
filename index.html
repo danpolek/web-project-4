@@ -5,12 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Naawi-Oodena</title>
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    div{background-color: rgb(214, 214, 214);
-    border-radius: 20px;}
-  </style>
 </head>
+
 <body>
   <header>
     <h1>Naawi-Oodena</h1>
@@ -23,11 +19,11 @@
     </nav>
   </header>
 
-  <main>
-    <div>
+  <!-- Intro Section -->
+  <main class="main-container">
     <section>
       <h2>Welcome to Naawi-Oodena</h2>
-      <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-db30-61f8-a9af-35037aa6e96b/raw?se=2025-05-09T19%3A30%3A43Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=5cab1ff4-c20d-41dc-babb-df0c2cc21dd4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-09T11%3A42%3A13Z&ske=2025-05-10T11%3A42%3A13Z&sks=b&skv=2024-08-04&sig=Mwun3P7dZZ4IuCljRaa0BKFOLgfSPDekvHk/cd1Vg4M%3D" alt="Naawi-Oodena Master Plan" class="img-feature" />
+      <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-db30-61f8-a9af-35037aa6e96b/raw?se=2025-05-12T20%3A40%3A30Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-12T08%3A45%3A50Z&ske=2025-05-13T08%3A45%3A50Z&sks=b&skv=2024-08-04&sig=vY9vJnAe6H2Si39tossU1%2BlTXd/ynm8IEkzS0MmkwKQ%3D" alt="Naawi-Oodena Master Plan" class="img-feature" />
       <p>
         Naawi-Oodena is an extraordinary urban reserve located on the former Kapyong Barracks site in Winnipeg, Manitoba. 
         Led by Treaty One Nations, it symbolizes peace, unity, and reconciliation. 
@@ -35,12 +31,14 @@
       </p>
       <p><strong>Source:</strong> <a href="https://treaty1.ca/naawi-oodena/" target="_blank" rel="noopener">Treaty1.ca</a></p>
     </section>
+
+    <!-- Development Areas -->
     <section>
       <h3>Main Development Areas</h3>
       <ul>
         <li><strong>Residential Living:</strong> A welcoming neighborhood for Indigenous and non-Indigenous residents alike.</li>
-        <li><strong>Mixed-use Commercial Space:</strong> Shops, restaurants, and services that create economic opportunities. The name "Naawi-Oodena" is an Anishinaabe term that translates to "center of the heart and community."</li>
-        <li><strong>Community and Culture:</strong> Gathering spaces to celebrate Indigenous identity, stories, and traditions. Three public or cultural spaces found in the plan include:
+        <li><strong>Mixed-use Commercial Space:</strong> Shops, restaurants, and services that create economic opportunities.</li>
+        <li><strong>Community and Culture:</strong> Gathering spaces to celebrate Indigenous identity, stories, and traditions:
           <ul>
             <li>Cultural Centre</li>
             <li>Public gathering place</li>
@@ -52,8 +50,50 @@
       </ul>
       <p><strong>Source:</strong> <a href="https://treaty1.ca/" target="_blank" rel="noopener">Naawi-Oodena Master Plan PDF</a></p>
     </section>
+    <!-- Main Feature Video Section -->
+<section class="hero-video">
+  <div class="video-overlay">
+    <h2>Experience Naawi-Oodena</h2>
+    <p class="subtitle">Canada's Largest Urban Reserve Development</p>
+    <button class="play-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="48px" height="48px">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+    </button>
+  </div>
+  <div class="video-container hero-video-container">
+    <iframe src="https://www.youtube.com/embed/vQU_QydOUIw?si=_qH-naYyrGHnU3hk&autoplay=1&mute=1&loop=1&playlist=vQU_QydOUIw" 
+            title="Naawi-Oodena Overview" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<!-- Community Vision Video Section -->
+<section class="content-video">
+  <div class="section-header">
+    <h3>Our Community Vision</h3>
+    <p class="section-description">Discover how Naawi-Oodena blends Indigenous culture with modern urban living</p>
+  </div>
+  <div class="video-container content-video-container">
+    <div class="video-placeholder" data-src="https://www.youtube.com/embed/cwM08UJRQR0?si=h8u4MZLhAWMtcimk&rel=0">
+      <img src="https://i.ytimg.com/vi/cwM08UJRQR0/maxresdefault.jpg" alt="Community Vision thumbnail" class="video-thumbnail">
+      <button class="play-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="48px" height="48px">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </button>
     </div>
-    <div>
+  </div>
+  <div class="video-caption">
+    <p>Hear from Treaty One Nation leaders about the vision behind this transformative project</p>
+  </div>
+</section>
+
+
+    <!-- Why It Matters -->
     <section>
       <h3>Why Naawi-Oodena Matters</h3>
       <p>
@@ -62,21 +102,14 @@
       </p>
       <p>
         What’s unique is that Naawi-Oodena combines First Nations traditional values and cultures with modern city planning 
-        processes like zoning, roads, and green infrastructure. It shows real partnership between Indigenous traditions and 
-        urban planning. This model can influence future projects across Canada and beyond.
+        processes like zoning, roads, and green infrastructure.
       </p>
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/cwM08UJRQR0?si=h8u4MZLhAWMtcimk"
-        title="Naawi-Oodena YouTube Video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-      <p><strong>Sources:</strong> 
-        <a href="https://www.youtube.com/watch?v=cwM08UJRQR0" target="_blank" rel="noopener">Treaty One on YouTube</a>
-      </p>
+
+
+      <p><strong>Source:</strong> <a href="https://www.youtube.com/watch?v=cwM08UJRQR0" target="_blank" rel="noopener">Treaty One on YouTube</a></p>
     </section>
-    <div>
+
+    <!-- The Finished Product -->
     <section>
       <h3>The Finished Product</h3>
       <p>
@@ -94,9 +127,8 @@
       <p>
         The design encouraged community engagement with walking paths, green spaces, and a layout that connects seamlessly with nearby neighborhoods like Tuxedo.
       </p>
-      <p><strong>Source:</strong> <a href="https://treaty1.ca/kapyong-barracks-redevelopment/" target="_blank" rel="noopener">Treaty1.ca - Kapyong Redevelopment</a></p>
+      <p><strong>Source:</strong> <a href="https://treaty1.ca/kapyong-barracks-redevelopment/" target="_blank" rel="noopener">Kapyong Redevelopment</a></p>
     </section>
-    </div>
   </main>
 
   <footer>
