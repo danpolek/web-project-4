@@ -50,7 +50,7 @@ h1, h2, h3, h4 {
 
 a {
   text-decoration: none;
-  color: black ;
+  color: black;
   transition: var(--transition);
 }
 
@@ -59,16 +59,15 @@ a:hover {
 }
 
 img {
-  width: 1300px;
-  height: 800px;
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
-}
-  img:hover {
-  transform: scale(1.3);
   transition: var(--transition);
+}
 
-
+img:hover {
+  transform: scale(1.03);
 }
 
 ul {
@@ -83,10 +82,9 @@ ul {
   padding: 0 var(--spacing-md);
 }
 
-
 .section-container {
   padding: var(--spacing-xl) 0;
-  background: url(img/427835b1-b7e8-4782-9132-978972ceb51f.png) no-repeat center center/cover;
+  background-image: url('https://sdmntprwestus2.oaiusercontent.com/files/00000000-141c-61f8-8fab-438dd05f8715/raw?se=2025-05-13T20%3A43%3A13Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-13T19%3A34%3A38Z&ske=2025-05-14T19%3A34%3A38Z&sks=b&skv=2024-08-04&sig=AJvc6VNXGWM%2BX/szv6T8VRtQvnqwrLvQtNzTru4Ef8U%3D');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -109,7 +107,6 @@ ul {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-size: cover;
 }
 
 .header-container {
@@ -153,7 +150,7 @@ ul {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-  url(img/Playful\ Day\ at\ the\ Park.png) no-repeat center center/cover;
+              url('https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-d958-622f-98c7-178b8b96926f/raw?se=2025-05-13T19%3A20%3A54Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=c156db82-7a33-468f-9cdd-06af263ceec8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-13T02%3A28%3A14Z&ske=2025-05-14T02%3A28%3A14Z&sks=b&skv=2024-08-04&sig=7R5oSOVU5TgKD8cgpMeGldnzayFD3GXEqjq%2B%2BBDUTrg%3D') no-repeat center center/cover;
   height: 60vh;
   display: flex;
   align-items: center;
@@ -190,13 +187,11 @@ ul {
   align-items: center;
 }
 
-
-
-.img-feature22 {
+.img-feature {
+  width: 100%;
+  max-width: 1200px;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  max-width: 100%;
-  height: auto;
 }
 
 .text-content {
@@ -223,9 +218,44 @@ ul {
   box-shadow: var(--box-shadow);
   transition: var(--transition);
 }
+
 .development-card:hover {
   transform: translateY(-5px);
-  transition: var(--transition);
+}
+
+/* Video Section */
+.video-section {
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: var(--spacing-xl) 0;
+}
+
+.video-section h2 {
+  color: var(--white);
+  margin-bottom: var(--spacing-lg);
+}
+
+.videos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* Importance Section */
@@ -251,7 +281,7 @@ ul {
 /* Footer Styles */
 .site-footer {
   background-color: var(--primary);
-  background: url(img/56919d07-a83e-4b72-a2bd-51e252f1e0ba.png) no-repeat center center/cover;
+  background-image: url('https://sdmntprcentralus.oaiusercontent.com/files/00000000-3970-61f5-a68e-012b51ec2fd3/raw?se=2025-05-13T20%3A43%3A13Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-13T19%3A35%3A56Z&ske=2025-05-14T19%3A35%3A56Z&sks=b&skv=2024-08-04&sig=QKxF5JiiURq3GXOw/I4uLNPqaWs8sNs061j0O2coA5M%3D');
   background-repeat: no-repeat;
   opacity: 0.8;
   color: var(--text);
@@ -278,4 +308,44 @@ ul {
   color: var(--secondary);
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .primary-nav {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: var(--spacing-md);
+  }
+  
+  .primary-nav.active {
+    left: 0;
+  }
+  
+  .primary-nav ul {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro-section .section-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+  }
+}
 

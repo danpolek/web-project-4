@@ -3,37 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Residential opportunities at Naawi-Oodena - Canada's largest urban reserve development">
   <title>Residential - Naawi-Oodena</title>
   <link rel="stylesheet" href="styles.css" />
-<style>
-  
-</style>
 </head>
 <body>
-  
-  <header>
-    <h1>Naawi-Oodena</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="residential.html">Residential</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="header-container">
+      <h1>Naawi-Oodena</h1>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="residential.html" class="active" aria-current="page">Residential</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <p><img src="https://www.clc-sic.ca/sites/default/files/styles/1_scale_large/public/images/kapyong.jpg?itok=o39rUu3j" alt="Homes in Naawi-Oodena" style="width:170px;height:170px;margin-left:15px;">
-      <p></p>        
-      <h2>Residential Living</h2>
-      <p></p>
-      <p>
+  <main class="main-container">
+    <!-- Hero Section -->
+    <section class="hero residential-hero">
+      <div class="hero-content">
+        <h2>Residential Living at Naawi-Oodena</h2>
+        <p class="subtitle">A welcoming community blending urban convenience with Indigenous culture</p>
+      </div>
+    </section>
+
+    <!-- Residential Intro -->
+    <section class="residential-intro">
+      <div class="section-container">
+        <div class="residential-grid">
+          <div class="residential-text">
+            <h2>Your Home in the Heart of the Community</h2>
+            <p>Naawi-Oodena offers diverse housing options designed to meet the needs of all community members. Our residential areas combine modern urban living with the rich cultural heritage of Treaty One Nations.</p>
+            <p>The development features a mix of housing types, from single-family homes to modern apartments, all designed with sustainability and community connection in mind.</p>
+          </div>
+          <div class="residential-image">
+            <img src="https://www.clc-sic.ca/sites/default/files/styles/1_scale_large/public/images/kapyong.jpg?itok=o39rUu3j" 
+                 alt="Homes in Naawi-Oodena" 
+                 class="img-feature">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Housing Options -->
+    <section class="housing-options">
+      <div class="section-container">
+        <h2>Housing Options</h2>
+        <div class="options-grid">
+          <div class="option-card">
+            <div class="option-icon">🏡</div>
+            <h3>Single-Family Homes</h3>
+            <p>Spacious detached homes with private yards, perfect for growing families.</p>
+            <ul>
+              <li>3-5 bedrooms</li>
+              <li>Private gardens</li>
+              <li>Garage options</li>
+            </ul>
+          </div>
+          
+          <div class="option-card">
+            <div class="option-icon">🏢</div>
+            <h3>Townhouses</h3>
+            <p>Modern attached homes with community amenities and low maintenance.</p>
+            <ul>
+              <li>2-4 bedrooms</li>
+              <li>Shared green spaces</li>
+              <li>Community centers</li>
+            </ul>
+          </div>
+          
+          <div class="option-card">
+            <div class="option-icon">🏘️</div>
+            <h3>Stacked Townhomes</h3>
+            <p>Vertical living solutions with the feel of a traditional home.</p>
+            <ul>
+              <li>2-3 bedrooms</li>
+              <li>Private entrances</li>
+              <li>Modern designs</li>
+            </ul>
+          </div>
+          
+          <div class="option-card">
+            <div class="option-icon">🏬</div>
+            <h3>Apartments</h3>
+            <p>Contemporary apartment living with urban convenience.</p>
+            <ul>
+              <li>Studio to 3 bedrooms</li>
+              <li>Building amenities</li>
+              <li>Central locations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Features -->
+    <section class="community-features">
+      <div class="section-container">
+        <h2>Community Amenities</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <h3>Cultural Integration</h3>
+            <p>Living spaces designed to reflect and honor Indigenous traditions and values.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Green Spaces</h3>
+            <p>Abundant parks, walking trails, and natural areas throughout the community.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Sustainable Design</h3>
+            <p>Energy-efficient buildings with eco-friendly materials and systems.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Mixed-Use Neighborhoods</h3>
+            <p>Easy access to shops, services, and cultural facilities within walking distance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="section-container">
+        <h2>Interested in Making Naawi-Oodena Your Home?</h2>
+        <p>Contact us to learn more about residential opportunities and availability.</p>
+        <a href="contact.html" class="cta-button">Contact Our Team</a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p></p>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Naawi-Oodena Development | Created by Daniel Aduayi</p>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
