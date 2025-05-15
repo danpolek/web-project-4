@@ -86,7 +86,7 @@ ul {
 
 .section-container {
   padding: var(--spacing-xl) 0;
-  background-image: url('https://sdmntprwestus2.oaiusercontent.com/files/00000000-141c-61f8-8fab-438dd05f8715/raw?se=2025-05-13T20%3A43%3A13Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-13T19%3A34%3A38Z&ske=2025-05-14T19%3A34%3A38Z&sks=b&skv=2024-08-04&sig=AJvc6VNXGWM%2BX/szv6T8VRtQvnqwrLvQtNzTru4Ef8U%3D');
+  background: url(img/427835b1-b7e8-4782-9132-978972ceb51f.png) no-repeat center center/cover;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -153,7 +153,7 @@ ul {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-d958-622f-98c7-178b8b96926f/raw?se=2025-05-13T19%3A20%3A54Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=c156db82-7a33-468f-9cdd-06af263ceec8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-13T02%3A28%3A14Z&ske=2025-05-14T02%3A28%3A14Z&sks=b&skv=2024-08-04&sig=7R5oSOVU5TgKD8cgpMeGldnzayFD3GXEqjq%2B%2BBDUTrg%3D') no-repeat center center/cover;
+  url(img/Playful\ Day\ at\ the\ Park.png) no-repeat center center/cover;
   height: 60vh;
   display: flex;
   align-items: center;
@@ -251,7 +251,7 @@ ul {
 /* Footer Styles */
 .site-footer {
   background-color: var(--primary);
-  background-image: url('https://sdmntprcentralus.oaiusercontent.com/files/00000000-3970-61f5-a68e-012b51ec2fd3/raw?se=2025-05-13T20%3A43%3A13Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-13T19%3A35%3A56Z&ske=2025-05-14T19%3A35%3A56Z&sks=b&skv=2024-08-04&sig=QKxF5JiiURq3GXOw/I4uLNPqaWs8sNs061j0O2coA5M%3D');
+  background: url(img/56919d07-a83e-4b72-a2bd-51e252f1e0ba.png) no-repeat center center/cover;
   background-repeat: no-repeat;
   opacity: 0.8;
   color: var(--text);
