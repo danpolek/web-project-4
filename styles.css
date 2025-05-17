@@ -242,6 +242,28 @@ a:hover {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) 
+{
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .menu-toggle {
     display: block;
   }
+
+  .primary-nav ul {
+    display: none;                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primary-nav.active ul {
+    display: flex;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}                                                                                                                                               
