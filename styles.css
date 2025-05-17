@@ -54,7 +54,7 @@ forward-looking vision of this development.
 
 :root {
   --primary: #2E5266;
-  --secondary: #6E9887;
+  --secondary: #00690e;
   --accent: #D3B88C;
   --light: #F4F4F4;
   --dark: #1D1D1D;
@@ -86,7 +86,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   color: var(--dark);
-  background-color: var(--light);
+  background-image: url('img/darkkids.png');
   overflow-x: hidden;
 }
 .skip-link {
@@ -111,7 +111,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading);
   line-height: 1.2;
   margin-bottom: var(--spacing-sm);
-  color: var(--primary);
+  color: var(--dark);
 }
 
 h1 { font-size: 2.5rem; }
@@ -157,6 +157,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
+  background-image: url(img/darkkids.png);
 }
 
 .header-container {
@@ -169,7 +170,7 @@ a:hover {
 .site-logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--dark);
 }
 
 .menu-toggle {
@@ -202,7 +203,7 @@ a:hover {
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('img/hero-bg.jpg') no-repeat center center/cover;
+              url('img/darkkids.png') no-repeat center center/cover;
   height: 60vh;
   display: flex;
   align-items: center;
@@ -294,6 +295,7 @@ a:hover {
   color: var(--white);
   padding: var(--spacing-xl) 0;
   text-align: center;
+  background-image: url(img/darkkids.png);
 }
 
 .footer-container {
