@@ -1,50 +1,83 @@
 /* 
-============================================
-NAAWI-OODENA STYLESHEET  
-Author: Daniel Aduayi  
-Project: Web Project #4 - Design Principles  
-============================================
+==================================================
+NAAWI-OODENA VIBRANT STYLESHEET
+A Celebration of Indigenous Urban Development
+==================================================
 
 COLOUR THEORY DOCUMENTATION:
-- Primary (#006D77): Teal represents water & life in Indigenous culture.
-- Secondary (#4d4d4d): Neutral gray for balance.
-- Accent (#E29578): Warm salmon for interactive elements.
-- Scheme: Triadic (teal, salmon, soft blue) for visual harmony.
+Primary Palette:
+- Sunrise Orange (#FF6B35) - Represents the energy of new beginnings
+- Water Blue (#1A9DFF) - Symbolizes the rivers and lakes of Treaty 1 territory
+- Earth Green (#2EC4B6) - Connects to the land and sustainability
+- Sun Yellow (#FFBC42) - The warmth of community
 
-TYPOGRAPHY CHOICES:
-- Headings (Roboto): Clean, modern sans-serif for hierarchy.
-- Body (Open Sans): Highly readable for content.
+Accent Palette:
+- Berry Red (#E71D36) - For important calls to action
+- Twilight Purple (#7B2D8F) - Cultural significance
+
+TYPOGRAPHY:
+- Headings: "Barlow Condensed" - Strong, modern presence
+- Body: "Karla" - Highly readable with personality
+
+DESIGN PRINCIPLES:
+- High contrast vibrant colours
+- Organic shapes and flowing lines
+- Cultural motifs in subtle patterns
+- Mobile-first responsive layout
 */
 
+/* ================ BASE STYLES ================ */
 :root {
-  /* Colour Variables */
-  --primary: #006D77;
-  --secondary: #4d4d4d;
-  --accent: #E29578;
-  --light: #00bfff;
-  --dark: #1D1D1D;
-  --text: #000000;
-  --white: #FFFFFF;
+  /* Vibrant Colour Palette */
+  --sunrise: #FF6B35;
+  --water: #1A9DFF;
+  --earth: #2EC4B6;
+  --sun: #FFBC42;
+  --berry: #E71D36;
+  --twilight: #7B2D8F;
+  --snow: #FDFFFC;
+  --night: #011627;
   
   /* Typography */
-  --font-heading: 'Roboto', sans-serif;
-  --font-body: 'Open Sans', sans-serif;
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-body: 'Karla', sans-serif;
+  --font-decorative: 'Righteous', cursive;
   
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
+  /* Spacing System */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
   
   /* Effects */
-  --border-radius: 8px;
-  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-round: 50%;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+  --shadow-xl: 0 12px 24px rgba(0,0,0,0.25);
+  
+  --transition-fast: 0.2s ease;
+  --transition-med: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-slow: 0.8s ease;
 }
 
-/* Base Reset */
-* {
+/* ================ FONT IMPORTS ================ */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Karla:wght@400;500;600;700&family=Righteous&display=swap');
+
+/* ================ GLOBAL RESETS ================ */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -52,41 +85,419 @@ TYPOGRAPHY CHOICES:
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--space-xl);
 }
 
 body {
   font-family: var(--font-body);
   line-height: 1.6;
-  color: var(--text);
-  background-color: var(--light);
+  color: var(--night);
+  background-color: var(--snow);
   overflow-x: hidden;
+  font-weight: 500;
 }
 
-/* Flexbox/Grid Documentation */
-.development-grid {
-  /* Grid layout for responsive cards */
+/* ================ TYPOGRAPHY ================ */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 0.9;
+  margin-bottom: var(--space-sm);
+}
+
+h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--space-xl);
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--sunrise), var(--sun));
+  border-radius: var(--radius-lg);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  color: var(--twilight);
+}
+
+p {
+  max-width: 65ch;
+  margin-bottom: var(--space-sm);
+}
+
+/* ================ LAYOUT UTILITIES ================ */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.flex {
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* ================ COMPONENTS ================ */
+
+/* ----- Header ----- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-xs) 0;
+  border-bottom: 2px solid var(--sun);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-decorative);
+  font-size: 2rem;
+  color: var(--sunrise);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--water);
+  mask: url('images/logo-icon.svg') no-repeat center;
+  -webkit-mask: url('images/logo-icon.svg') no-repeat center;
+}
+
+/* ----- Navigation ----- */
+.primary-nav ul {
+  display: flex;
+  gap: var(--space-sm);
+  list-style: none;
+}
+
+.primary-nav a {
+  position: relative;
+  padding: var(--space-xs) var(--space-sm);
+  font-weight: 600;
+  color: var(--night);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.primary-nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--berry);
+  transition: var(--transition-med);
+}
+
+.primary-nav a:hover::before,
+.primary-nav a.active::before {
+  width: 100%;
+}
+
+/* ----- Hero Section ----- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255,107,53,0.3) 0%, transparent 30%),
+    linear-gradient(to bottom, var(--water), var(--twilight));
+  color: var(--snow);
+  padding-top: var(--space-3xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('images/pattern.svg') repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero h2 {
+  font-size: clamp(3rem, 10vw, 5rem);
+  line-height: 0.9;
+  margin-bottom: var(--space-md);
+  color: var(--sun);
+  text-shadow: 2px 2px 0 var(--twilight);
+}
+
+.hero .subtitle {
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  margin-bottom: var(--space-xl);
+  color: var(--snow);
+}
+
+/* ----- Button Styles ----- */
+.btn {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-lg);
+  border-radius: var(--radius-xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--transition-med);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--berry);
+  color: var(--snow);
+  box-shadow: 0 4px 0 var(--twilight);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--twilight);
+}
+
+.btn-secondary {
+  background-color: var(--sun);
+  color: var(--night);
+  box-shadow: 0 4px 0 var(--sunrise);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--sunrise);
+}
+
+/* ----- Card Styles ----- */
+.card {
+  background: var(--snow);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-med);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, var(--sunrise), var(--sun));
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: var(--space-md);
+}
+
+/* ----- Section Styles ----- */
+.section {
+  padding: var(--space-2xl) 0;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.section-title h2 {
+  display: inline-block;
+}
+
+/* ----- Feature Grid ----- */
+.feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-md);
+  gap: var(--space-lg);
 }
 
-/* Custom Animation (Beyond Class Examples) */
+.feature-item {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  border: 2px solid var(--sun);
+  transition: var(--transition-med);
+}
+
+.feature-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+/* ----- Footer ----- */
+.site-footer {
+  background: linear-gradient(to bottom, var(--night), #000);
+  color: var(--snow);
+  padding: var(--space-2xl) 0 var(--space-md);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.footer-logo {
+  font-size: 2rem;
+  color: var(--sun);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-links h3 {
+  color: var(--sun);
+  margin-bottom: var(--space-md);
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--snow);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  display: inline-block;
+  padding: var(--space-3xs) 0;
+}
+
+.footer-links a:hover {
+  color: var(--sun);
+  transform: translateX(4px);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-round);
+  background-color: var(--water);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.social-icon:hover {
+  transform: translateY(-4px) rotate(10deg);
+  background-color: var(--sun);
+}
+
+/* ================ ANIMATIONS ================ */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
 }
 
-.cta-button:hover {
-  -webkit-animation: pulse 1.5s infinite;
-  -moz-animation: pulse 1.5s infinite;
-  animation: pulse 1.5s infinite;
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
 
-/* Vendor Prefixes for Compatibility */
-.development-card {
-  -webkit-transform: translateY(-5px);
-  -moz-transform: translateY(-5px);
-  transform: translateY(-5px);
+/* ================ MEDIA QUERIES ================ */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  
+  .hero {
+    padding-top: var(--space-2xl);
+    text-align: center;
+  }
+  
+  .hero h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ================ PRINT STYLES ================ */
+@media print {
+  .site-header, .site-footer {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    font-weight: normal;
+  }
 }
 
