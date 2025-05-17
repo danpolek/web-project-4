@@ -79,7 +79,7 @@ padding:0 var(--spacing-md)
 
 .section-container {
 padding:var(--spacing-xl) 0;
-background-image:url(odenafinished.png);
+background-image:url(img/odenafinished.png);
 background-repeat:no-repeat;
 background-size:cover;
 background-position:center
@@ -141,7 +141,7 @@ color:var(--white)
 }
 
 .hero {
-background:linear-gradient(#00000080,#00000080),url(img/Playful\ Day\ at\ the\ Park.png) no-repeat center center/cover;
+background:linear-gradient(#00000080,#00000080),url(img/darkkids.png) no-repeat center center/cover;
 height:60vh;
 display:flex;
 align-items:center;
@@ -266,7 +266,7 @@ margin:0 auto
 
 .site-footer {
 background-color:var(--primary);
-background-image:url(img/kids\ playing\ bright\.png);
+background-image:url(img/kidsbright.png);
 background-repeat:no-repeat;
 opacity:.8;
 color:var(--text);
