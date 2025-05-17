@@ -1,132 +1,334 @@
-/* 
-================================
-NAAWI-OODENA STYLES
-PTEC Web Project #4 - Grade 9
-================================
-
-COLOUR SCHEME:
-- Blue (#2B59C3) = Water/Trust
-- Orange (#FF9F1C) = Energy/Sun
-- Green (#2EC4B6) = Earth/Growth
-- White (#FDFFFC) = Clean background
-
-FONTS:
-- Headings: "Barlow" (bold)
-- Body: "Open Sans" (easy to read)
-*/
-
-/* BASIC SETUP */
 :root {
-  --blue: #2B59C3;
-  --orange: #FF9F1C;
-  --green: #2EC4B6;
-  --white: #FDFFFC;
-  --black: #011627;
+--primary:#006D77;
+--secondary:#4d4d4d;
+--accent:#E29578;
+--light:#00bfff;
+--dark:#1D1D1D;
+--text:#000;
+--white:#FFF;
+--font-heading:Roboto,sans-serif;
+--font-body:'Open Sans',sans-serif;
+--spacing-xs:.5rem;
+--spacing-sm:1rem;
+--spacing-md:1.5rem;
+--spacing-lg:2rem;
+--spacing-xl:3rem;
+--border-radius:8px;
+--box-shadow:0 4px 6px #0000001a;
+--transition:all .3s ease
+}
+
+* {
+margin:0;
+padding:0;
+box-sizing:border-box
+}
+
+html {
+scroll-behavior:smooth
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: var(--white);
-  color: var(--black);
-  line-height: 1.6;
-  margin: 0;
+font-family:var(--font-body);
+line-height:1.6;
+color:var(--text);
+background-color:var(--light);
+overflow-x:hidden;
+font-weight:700
 }
 
-/* HEADER - Simple but colorful */
-header {
-  background-color: var(--blue);
-  padding: 1rem;
-  position: sticky;
-  top: 0;
+h1,h2,h3,h4 {
+font-family:var(--font-heading);
+line-height:1.2;
+margin-bottom:var(--spacing-sm);
+color:#000
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
+a {
+text-decoration:none;
+color:#000;
+transition:var(--transition)
 }
 
-nav a {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem;
-  border-radius: 5px;
+a:hover {
+color:var(--text)
 }
 
-nav a:hover {
-  background-color: var(--orange);
+img {
+max-width:100%;
+height:auto;
+display:block;
+margin:0 auto;
+transition:var(--transition)
 }
 
-/* HERO SECTION - Eye-catching */
-.hero {
-  background: linear-gradient(var(--blue), var(--green));
-  color: var(--white);
-  text-align: center;
-  padding: 4rem 1rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  text-shadow: 2px 2px var(--black);
-}
-
-/* CARDS - Simple grid layout */
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
-}
-
-.card {
-  background: var(--white);
-  border: 3px solid var(--orange);
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  transition: 0.3s;
-}
-
-/* FOOTER - Clean finish */
-footer {
-  background-color: var(--black);
-  color: var(--white);
-  text-align: center;
-  padding: 2rem;
-}
-
-/* BUTTONS - Fun clickable elements */
-.button {
-  display: inline-block;
-  background-color: var(--orange);
-  color: var(--black);
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-.button:hover {
-  background-color: var(--green);
-}
-
-/* RESPONSIVE - Works on phones */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-  
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
 img:hover {
-  transform: scale(1.05);
-  transition: 0.3s;
+transform:scale(1.03)
+}
+
+ul {
+list-style:none
+}
+
+.container {
+width:100%;
+max-width:1200px;
+margin:0 auto;
+padding:0 var(--spacing-md)
+}
+
+.section-container {
+padding:var(--spacing-xl) 0;
+background-image:url(img/427835b1-b7e8-4782-9132-978972ceb51f.png);
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center
+}
+
+.text-center {
+text-align:center
+}
+
+.source {
+font-size:.9rem;
+color:#666;
+margin-top:var(--spacing-md)
+}
+
+.site-header {
+background-color:var(--white);
+box-shadow:var(--box-shadow);
+position:sticky;
+top:0;
+z-index:100
+}
+
+.header-container {
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:var(--spacing-sm) 0
+}
+
+.site-header h1 {
+font-size:1.8rem;
+color:#000
+}
+
+.menu-toggle {
+display:none;
+background:none;
+border:none;
+font-size:1.5rem;
+cursor:pointer;
+color:#000
+}
+
+.primary-nav ul {
+display:flex;
+gap:var(--spacing-md)
+}
+
+.primary-nav a {
+font-weight:600;
+padding:var(--spacing-xs) var(--spacing-sm);
+border-radius:var(--border-radius)
+}
+
+.primary-nav a.active,.primary-nav a:hover {
+background-color:var(--secondary);
+color:var(--white)
+}
+
+.hero {
+background:linear-gradient(#00000080,#00000080),url(img/Playful\ Day\ at\ the\ Park.png) no-repeat center center/cover;
+height:60vh;
+display:flex;
+align-items:center;
+color:var(--white);
+text-align:center
+}
+
+.hero-content {
+max-width:800px;
+margin:0 auto;
+padding:var(--spacing-md)
+}
+
+.hero h2 {
+font-size:2.5rem;
+margin-bottom:var(--spacing-sm);
+color:var(--white)
+}
+
+.hero .subtitle {
+font-size:1.2rem;
+margin-bottom:var(--spacing-md)
+}
+
+.intro-section {
+background-color:var(--white)
+}
+
+.intro-section .section-container {
+display:grid;
+grid-template-columns:1fr;
+gap:var(--spacing-xl);
+align-items:center
+}
+
+.img-feature {
+width:100%;
+max-width:1200px;
+border-radius:var(--border-radius);
+box-shadow:var(--box-shadow)
+}
+
+.text-content {
+max-width:800px;
+margin:0 auto
+}
+
+.development-section {
+background-color:var(--light)
+}
+
+.development-grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:var(--spacing-md);
+margin-top:var(--spacing-xl)
+}
+
+.development-card {
+background:var(--white);
+padding:var(--spacing-lg);
+border-radius:var(--border-radius);
+box-shadow:var(--box-shadow);
+transition:var(--transition)
+}
+
+.development-card:hover {
+transform:translateY(-5px)
+}
+
+.video-section {
+background-color:var(--secondary);
+color:var(--white);
+padding:var(--spacing-xl) 0
+}
+
+.video-section h2 {
+color:var(--white);
+margin-bottom:var(--spacing-lg)
+}
+
+.videos-container {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:var(--spacing-md)
+}
+
+.video-wrapper {
+position:relative;
+padding-bottom:56.25%;
+height:0;
+overflow:hidden;
+border-radius:var(--border-radius)
+}
+
+.video-wrapper iframe {
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+border:none
+}
+
+.importance-section {
+background-color:var(--white)
+}
+
+.importance-content {
+max-width:800px;
+margin:0 auto
+}
+
+.finished-section {
+background-color:var(--light)
+}
+
+.finished-content {
+max-width:800px;
+margin:0 auto
+}
+
+.site-footer {
+background-color:var(--primary);
+background-image:url(img/kids_playing_bright.png);
+background-repeat:no-repeat;
+opacity:.8;
+color:var(--text);
+padding:var(--spacing-xl) 0
+}
+
+.footer-container {
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:var(--spacing-md)
+}
+
+.footer-nav ul {
+display:flex;
+gap:var(--spacing-md)
+}
+
+.footer-nav a {
+color:var(--white)
+}
+
+.footer-nav a:hover {
+color:var(--secondary)
+}
+
+@media (max-width: 768px) {
+.menu-toggle {
+display:block
+}
+
+.primary-nav {
+position:fixed;
+top:70px;
+left:-100%;
+width:100%;
+background-color:var(--white);
+box-shadow:var(--box-shadow);
+transition:var(--transition);
+padding:var(--spacing-md)
+}
+
+.primary-nav.active {
+left:0
+}
+
+.primary-nav ul {
+flex-direction:column;
+gap:var(--spacing-sm)
+}
+
+.hero h2 {
+font-size:2rem
+}
+}
+
+@media (min-width: 992px) {
+.intro-section .section-container {
+grid-template-columns:1fr 1fr
+}
+
+.hero h2 {
+font-size:3rem
+}
 }
