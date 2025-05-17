@@ -1,221 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Naawi-Oodena - Canada's largest urban reserve development in Winnipeg, Manitoba">
   <title>Naawi-Oodena | Centre of the Heart | Treaty One Development</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  div{background-color: aliceblue;}
-</style>
 </head>
 
 <body>
   <header class="site-header">
-    <h1>Naawi-Oodena</h1>
-    <nav class="primary-nav">
-      <div>
+    <div class="container header-container">
+      <h1 class="site-logo">Naawi-Oodena</h1>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="primary-nav">
         <ul>
           <li><a href="index.html" class="active" aria-current="page">Home</a></li>
           <li><a href="residential.html">Residential</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
+          <li><a href="community.html">Community</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <main class="main-container">
+  <main>
     <!-- Hero Section -->
     <section class="hero">
-      <h2>Welcome to Naawi-Oodena</h2>
-      <p class="subtitle">Canada's largest urban reserve for peace and unity</p>
+      <div class="hero-content">
+        <h2>Welcome to Naawi-Oodena</h2>
+        <p class="subtitle">Canada's largest urban reserve for peace and unity</p>
+        <a href="#about" class="btn btn-primary">Learn More</a>
+      </div>
     </section>
 
-    <!-- Intro Section -->
-    <section class="intro-section">
-      <div class="section-container">
-        <img src="https://winnipeg.citynews.ca/wp-content/blogs.dir/sites/13/Naawi-Oodena-urban-reserve-2.jpg" 
-            alt="Naawi-Oodena Master Plan" 
-            class="img-feature" />
-        <div class="text-content">
-          <p>
-            Naawi-Oodena is a transformative 156-acre urban reserve development on the former Kapyong Barracks site in Winnipeg, Manitoba. 
-            As the largest urban reserve in Canada, this $1 billion project represents a landmark achievement in Indigenous-led development 
-            and urban planning. The name "Naawi-Oodena" translates to "Centre of the Heart" in Anishinaabemowin, reflecting both its geographic 
-            centrality in Winnipeg and its spiritual significance to Treaty One Nations.
-          </p>
-          <p class="source"><strong>Source:</strong> <a href="https://treaty1.ca/naawi-oodena/" target="_blank" rel="noopener noreferrer">Treaty1.ca - Naawi-Oodena</a></p>
-          
-          <p>
-            The development is led by Treaty One Nation, a collective of seven Anishinaabe First Nations: Brokenhead Ojibway Nation, 
-            Long Plain First Nation, Peguis First Nation, Roseau River Anishinaabe First Nation, Sagkeeng First Nation, Sandy Bay Ojibway First Nation, 
-            and Swan Lake First Nation. This project represents the largest single return of urban land to First Nations in Canadian history.
-          </p>
-          <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/wp-content/uploads/2021/10/Naawi-Oodena-Master-Plan-Booklet-2021-10-07.pdf" target="_blank" rel="noopener noreferrer">Naawi-Oodena Master Plan, p.4</a></p>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="text-center">About Naawi-Oodena</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Our Vision</h3>
+            <p>Creating a vibrant, sustainable community that honors Indigenous traditions while providing modern urban living.</p>
+          </div>
+          <div class="card">
+            <h3>Location</h3>
+            <p>156-acre urban reserve development on the former Kapyong Barracks site in Winnipeg, Manitoba.</p>
+          </div>
+          <div class="card">
+            <h3>Development</h3>
+            <p>$1 billion project representing the largest single return of urban land to First Nations in Canadian history.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Development Areas -->
-    <section class="development-section">
-      <div class="section-container">
-        <h2>Main Development Areas</h2>
-        <div class="development-grid">
-          <div class="development-card">
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="text-center">Development Areas</h2>
+        <div class="card-grid">
+          <div class="card">
             <h3>Residential Living</h3>
-            <p>The residential component will feature approximately 3,000 housing units across various typologies including single-family homes, 
-              townhouses, stacked townhouses, and mid-rise apartments. About 30% of units will be designated as affordable housing.</p>
-            <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/wp-content/uploads/2021/10/Naawi-Oodena-Master-Plan-Booklet-2021-10-07.pdf" target="_blank" rel="noopener noreferrer">Master Plan, p.12</a></p>
+            <p>Approximately 3,000 housing units across various typologies with 30% affordable housing.</p>
+            <a href="residential.html" class="btn btn-secondary">Explore Homes</a>
           </div>
-          <div class="development-card">
-            <h3>Mixed-use Commercial Space</h3>
-            <p>The commercial district will include 1.2 million square feet of retail, office, and institutional space, with a focus on Indigenous 
-              entrepreneurship. Key features include a business incubator, food hall showcasing Indigenous cuisine, and cultural retail spaces.</p>
-            <p class="source"><strong>Source:</strong> <a href="https://treaty1.ca/economic-development/" target="_blank" rel="noopener noreferrer">Treaty1 Economic Development</a></p>
+          <div class="card">
+            <h3>Commercial Space</h3>
+            <p>1.2 million square feet of retail, office, and institutional space focused on Indigenous entrepreneurship.</p>
+            <a href="residential.html" class="btn btn-secondary">Business Opportunities</a>
           </div>
-          <div class="development-card">
-            <h3>Community and Culture</h3>
-            <p>The cultural heart of the development includes:</p>
-            <ul>
-              <li>30,000 sq ft Indigenous Cultural Centre</li>
-              <li>Central Gathering Plaza for ceremonies and events</li>
-              <li>15 acres of parks with Indigenous landscaping</li>
-              <li>Interpretive trails with Indigenous art installations</li>
-            </ul>
-            <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/wp-content/uploads/2021/10/Naawi-Oodena-Master-Plan-Booklet-2021-10-07.pdf" target="_blank" rel="noopener noreferrer">Master Plan, p.18-20</a></p>
-          </div>
-          <div class="development-card">
-            <h3>Recreation and Sports</h3>
-            <p>The development includes a 100,000 sq ft community recreation complex with aquatic center, gymnasium, and outdoor sports fields. 
-              A network of 8km of multi-use trails will connect all areas of the development.</p>
-            <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/wp-content/uploads/2021/10/Naawi-Oodena-Master-Plan-Booklet-2021-10-07.pdf" target="_blank" rel="noopener noreferrer">Master Plan, p.22</a></p>
-          </div>
-          <div class="development-card">
-            <h3>Education and Learning</h3>
-            <p>The education precinct includes a K-12 school operated by Treaty One Nation, adult education center, and partnerships with 
-              local universities for Indigenous-focused programming. The literacy rate goal is 100% for residents.</p>
-            <p class="source"><strong>Source:</strong> <a href="https://treaty1.ca/education/" target="_blank" rel="noopener noreferrer">Treaty1 Education</a></p>
+          <div class="card">
+            <h3>Community & Culture</h3>
+            <p>Cultural center, gathering plaza, and 15 acres of parks with Indigenous landscaping.</p>
+            <a href="residential.html" class="btn btn-secondary">Discover Culture</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Video Section -->
-    <section class="video-section">
-      <div class="section-container">
-        <h2>Learn More About Our Vision</h2>
-        <div class="videos-container">
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/vQU_QydOUIw" title="Naawi-Oodena Development Video" allowfullscreen></iframe>
-            <p class="source"><strong>Source:</strong> Treaty One Nation Official Channel</p>
-          </div>
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/GfUGDEJbd1E" title="Treaty One Nation Development" allowfullscreen></iframe>
-            <p class="source"><strong>Source:</strong> APTN News</p>
-          </div>
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/cwM08UJRQR0" title="Urban Reserve Development" allowfullscreen></iframe>
-            <p class="source"><strong>Source:</strong> CBC Manitoba</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why It Matters -->
-    <section class="importance-section">
-      <div class="section-container">
-        <h2>Why Naawi-Oodena Matters</h2>
-        <div class="importance-content">
-          <p>
-            Naawi-Oodena represents a new model for urban Indigenous economic development in Canada. The project is expected to generate 
-            $2.8 billion in economic impact over 20 years, creating 10,000 construction jobs and 4,000 permanent positions. Importantly, 
-            60% of these opportunities will be reserved for Indigenous workers and businesses.
-          </p>
-          <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/wp-content/uploads/2021/10/Economic-Impact-Study-2021.pdf" target="_blank" rel="noopener noreferrer">Economic Impact Study 2021</a></p>
-          
-          <p>
-            The development incorporates Indigenous design principles throughout, including:
-            - Circular site planning reflecting traditional camp layouts
-            - Buildings oriented to the four directions
-            - Use of natural materials like wood and stone
-            - Integration of Indigenous art and symbolism
-            - Landscaping with medicinal plants and traditional food sources
-          </p>
-          <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/wp-content/uploads/2021/10/Naawi-Oodena-Master-Plan-Booklet-2021-10-07.pdf" target="_blank" rel="noopener noreferrer">Master Plan, p.30-32</a></p>
-          
-          <p>
-            Environmentally, Naawi-Oodena is targeting LEED Gold certification for all major buildings. The plan includes:
-            - District geothermal heating system
-            - 100% renewable energy by 2030
-            - Zero waste to landfill target
-            - 40% tree canopy coverage
-            - Stormwater management using naturalized wetlands
-          </p>
-          <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/environment/" target="_blank" rel="noopener noreferrer">Treaty1 Environmental Policy</a></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- The Finished Product -->
-    <section class="finished-section">
-      <div class="section-container">
-        <h2>The Finished Community</h2>
-        <div class="finished-content">
-          <p>
-            Upon completion in 2040, Naawi-Oodena will be home to approximately 10,000 residents with a daytime population of 15,000. 
-            The development will feature complete walkability with all amenities within a 15-minute walk from any residence. The street 
-            network prioritizes pedestrians and cyclists, with limited vehicle access in the residential core areas.
-          </p>
-          <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/wp-content/uploads/2021/10/Naawi-Oodena-Master-Plan-Booklet-2021-10-07.pdf" target="_blank" rel="noopener noreferrer">Master Plan, p.40</a></p>
-          
-          <p>
-            The residential areas are organized into distinct neighborhoods, each with its own character:
-            - The Meadows: Affordable housing and seniors living
-            - The Bluffs: Mid-rise apartments and townhomes
-            - The Ridge: Single-family homes with larger lots
-            - The Grove: Mixed-income housing near the cultural center
-          </p>
-          <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/wp-content/uploads/2021/10/Naawi-Oodena-Master-Plan-Booklet-2021-10-07.pdf" target="_blank" rel="noopener noreferrer">Master Plan, p.44-46</a></p>
-          
-          <p>
-            The commercial district will include:
-            - 500,000 sq ft of retail space
-            - 300,000 sq ft of office space
-            - 200,000 sq ft of light industrial
-            - 200,000 sq ft of institutional space
-            - 100-room boutique hotel with conference facilities
-          </p>
-          <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/wp-content/uploads/2021/10/Economic-Impact-Study-2021.pdf" target="_blank" rel="noopener noreferrer">Economic Impact Study, p.15</a></p>
-          
-          <p>
-            Transportation infrastructure includes:
-            - Direct access to Winnipeg's rapid transit network
-            - Bike share program with 30 stations
-            - Car share program with electric vehicles
-            - Dedicated lanes for public transit
-            - Underground parking in commercial areas
-          </p>
-          <p class="source"><strong>Source:</strong> <a href="https://www.treaty1.ca/wp-content/uploads/2021/10/Naawi-Oodena-Master-Plan-Booklet-2021-10-07.pdf" target="_blank" rel="noopener noreferrer">Master Plan, p.50</a></p>
-        </div>
+    <!-- Call to Action -->
+    <section class="section bg-primary text-white">
+      <div class="container text-center">
+        <h2>Join Our Community</h2>
+        <p class="mb-lg">Be part of this transformative development in the heart of Winnipeg.</p>
+        <a href="contact.html" class="btn btn-accent">Contact Us</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-container">
-      <p>&copy; 2023 Naawi-Oodena Development | Created by Daniel Aduayi</p>
+    <div class="container footer-container">
+      <p>&copy; 2023 Naawi-Oodena Development | Created by [Your Name]</p>
       <nav class="footer-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="https://treaty1.ca/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="https://treaty1.ca/contact/">Official Site</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </footer>
+
 </body>
 </html>
