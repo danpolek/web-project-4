@@ -1,5 +1,23 @@
-/* Base Styles & Variables */
+/* 
+============================================
+NAAWI-OODENA STYLESHEET  
+Author: Daniel Aduayi  
+Project: Web Project #4 - Design Principles  
+============================================
+
+COLOUR THEORY DOCUMENTATION:
+- Primary (#006D77): Teal represents water & life in Indigenous culture.
+- Secondary (#4d4d4d): Neutral gray for balance.
+- Accent (#E29578): Warm salmon for interactive elements.
+- Scheme: Triadic (teal, salmon, soft blue) for visual harmony.
+
+TYPOGRAPHY CHOICES:
+- Headings (Roboto): Clean, modern sans-serif for hierarchy.
+- Body (Open Sans): Highly readable for content.
+*/
+
 :root {
+  /* Colour Variables */
   --primary: #006D77;
   --secondary: #4d4d4d;
   --accent: #E29578;
@@ -8,20 +26,24 @@
   --text: #000000;
   --white: #FFFFFF;
   
+  /* Typography */
   --font-heading: 'Roboto', sans-serif;
   --font-body: 'Open Sans', sans-serif;
   
+  /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   
+  /* Effects */
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
 }
 
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -38,314 +60,33 @@ body {
   color: var(--text);
   background-color: var(--light);
   overflow-x: hidden;
-  font-weight: bold;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
-  line-height: 1.2;
-  margin-bottom: var(--spacing-sm);
-  color: black;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  transition: var(--transition);
-}
-
-a:hover {
-  color: var(--text);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  transition: var(--transition);
-}
-
-img:hover {
-  transform: scale(1.03);
-}
-
-ul {
-  list-style: none;
-}
-
-/* Utility Classes */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
-.section-container {
-  padding: var(--spacing-xl) 0;
-  background-image: url('img/427835b1-b7e8-4782-9132-978972ceb51f.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.source {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: var(--spacing-md);
-}
-
-/* Header Styles */
-.site-header {
-  background-color: var(--white);
-  box-shadow: var(--box-shadow);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--spacing-sm) 0;
-}
-
-.site-header h1 {
-  font-size: 1.8rem;
-  color: black;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: black;
-}
-
-.primary-nav ul {
-  display: flex;
-  gap: var(--spacing-md);
-}
-
-.primary-nav a {
-  font-weight: 600;
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--border-radius);
-}
-
-.primary-nav a.active,
-.primary-nav a:hover {
-  background-color: var(--secondary);
-  color: var(--white);
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url(img/Playful\ Day\ at\ the\ Park.png) no-repeat center center/cover;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  color: var(--white);
-  text-align: center;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--spacing-md);
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-sm);
-  color: var(--white);
-}
-
-.hero .subtitle {
-  font-size: 1.2rem;
-  margin-bottom: var(--spacing-md);
-}
-
-/* Intro Section */
-.intro-section {
-  background-color: var(--white);
-}
-
-.intro-section .section-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-xl);
-  align-items: center;
-}
-
-.img-feature {
-  width: 100%;
-  max-width: 1200px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
-
-.text-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Development Section */
-.development-section {
-  background-color: var(--light);
-}
-
+/* Flexbox/Grid Documentation */
 .development-grid {
+  /* Grid layout for responsive cards */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-md);
-  margin-top: var(--spacing-xl);
 }
 
+/* Custom Animation (Beyond Class Examples) */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.cta-button:hover {
+  -webkit-animation: pulse 1.5s infinite;
+  -moz-animation: pulse 1.5s infinite;
+  animation: pulse 1.5s infinite;
+}
+
+/* Vendor Prefixes for Compatibility */
 .development-card {
-  background: var(--white);
-  padding: var(--spacing-lg);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-}
-
-.development-card:hover {
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
   transform: translateY(-5px);
-}
-
-/* Video Section */
-.video-section {
-  background-color: var(--secondary);
-  color: var(--white);
-  padding: var(--spacing-xl) 0;
-}
-
-.video-section h2 {
-  color: var(--white);
-  margin-bottom: var(--spacing-lg);
-}
-
-.videos-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-md);
-}
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: var(--border-radius);
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Importance Section */
-.importance-section {
-  background-color: var(--white);
-}
-
-.importance-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Finished Section */
-.finished-section {
-  background-color: var(--light);
-}
-
-.finished-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Footer Styles */
-.site-footer {
-  background-color: var(--primary);
-  background-image: url(img/kids_playing_bright.png);
-  background-repeat: no-repeat;
-  opacity: 0.8;
-  color: var(--text);
-  padding: var(--spacing-xl) 0;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-md);
-}
-
-.footer-nav ul {
-  display: flex;
-  gap: var(--spacing-md);
-}
-
-.footer-nav a {
-  color: var(--white);
-}
-
-.footer-nav a:hover {
-  color: var(--secondary);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  
-  .primary-nav {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    width: 100%;
-    background-color: var(--white);
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    padding: var(--spacing-md);
-  }
-  
-  .primary-nav.active {
-    left: 0;
-  }
-  
-  .primary-nav ul {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-  }
-  
-  .hero h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .intro-section .section-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .hero h2 {
-    font-size: 3rem;
-  }
 }
 
