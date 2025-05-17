@@ -79,7 +79,7 @@ padding:0 var(--spacing-md)
 
 .section-container {
 padding:var(--spacing-xl) 0;
-background-image:url(img/427835b1-b7e8-4782-9132-978972ceb51f.png);
+background-image:url(odenafinished.png);
 background-repeat:no-repeat;
 background-size:cover;
 background-position:center
@@ -266,7 +266,7 @@ margin:0 auto
 
 .site-footer {
 background-color:var(--primary);
-background-image:url(img/kids_playing_bright.png);
+background-image:url(img/kids\ playing\ bright\.png);
 background-repeat:no-repeat;
 opacity:.8;
 color:var(--text);
