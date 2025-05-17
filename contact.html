@@ -1,38 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Naawi-Oodena | Centre of the Heart</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Unique Contact Page Styles */
+    .contact-container {
+      background: linear-gradient(to bottom, #f8f1e5, #e8d9c5);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 1200px;
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: linear-gradient(to right, #8b5a2b, #d4a76a, #8b5a2b);
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .contact-header h2 {
+      font-size: 2.5rem;
+      color: #5c3a21;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .contact-header p {
+      font-size: 1.2rem;
+      color: #7a5c3e;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #5c3a21;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #d4a76a;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #8b5a2b;
+      box-shadow: 0 0 0 3px rgba(139, 90, 43, 0.2);
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background: #8b5a2b;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      font-weight: 600;
+    }
+
+    .submit-btn:hover {
+      background: #6d4521;
+      transform: translateY(-2px);
+    }
+
+    .contact-info {
+      background: rgba(139, 90, 43, 0.1);
+      padding: 2rem;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .contact-info::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, #8b5a2b, #d4a76a, #8b5a2b);
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      background: #8b5a2b;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .info-content h3 {
+      color: #5c3a21;
+      margin-bottom: 0.3rem;
+      font-size: 1.2rem;
+    }
+
+    .info-content p, .info-content a {
+      color: #7a5c3e;
+      margin: 0;
+      text-decoration: none;
+    }
+
+    .info-content a:hover {
+      color: #8b5a2b;
+      text-decoration: underline;
+    }
+
+    .map-container {
+      margin-top: 2rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      height: 300px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .cultural-note {
+      background: rgba(212, 167, 106, 0.2);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+      border-left: 5px solid #8b5a2b;
+    }
+
+    .cultural-note h3 {
+      color: #5c3a21;
+      margin-top: 0;
+    }
+
+    .cultural-note p {
+      color: #7a5c3e;
+      margin-bottom: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-header h2 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Interactive Elements */
+    .floating-elements {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .floating-element {
+      position: absolute;
+      opacity: 0.1;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .element-1 {
+      width: 100px;
+      height: 100px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 0 L100 50 L50 100 L0 50 Z" fill="%238b5a2b"/></svg>');
+      top: 10%;
+      left: 5%;
+      animation: float 15s infinite ease-in-out;
+    }
+
+    .element-2 {
+      width: 80px;
+      height: 80px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="%238b5a2b" stroke-width="8" fill="none"/></svg>');
+      top: 70%;
+      left: 80%;
+      animation: float 12s infinite ease-in-out reverse;
+    }
+
+    .element-3 {
+      width: 60px;
+      height: 60px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 L80,20 L80,80 L20,80 Z" stroke="%238b5a2b" stroke-width="5" fill="none"/></svg>');
+      top: 30%;
+      left: 85%;
+      animation: float 18s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+  </style>
 </head>
 <body>
-    <p>Contact Us</p>
-    <p>For more information about Naawi-Oodena, please contact us at:</p>
-    <p>Email: info@naawi-oodena.com</p>
-    <p>Phone: +1 (555) 123-4567</p>
-    <p>Address: 123 Naawi-Oodena St, City, Country</p>
-    <p>Follow us on social media:</p>
-    <p>Facebook: <a href="https://www.facebook.com/naawioodena">https://www.facebook.com/naawioodena</a></p>
-    <p>Twitter: <a href="https://twitter.com/naawioodena">https://twitter.com/naawioodena</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/naawioodena">https://www.instagram.com/naawioodena</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/company/naawioodena">https://www.linkedin.com/company/naawioodena</a></p>
-    <p>We look forward to hearing from you!</p>
-    <p>Thank you for your interest in Naawi-Oodena.</p>
-    <p>For any inquiries, please fill out the form below:</p>
-    <form action="submit_form.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Submit</button>
-    </form>
-    <footer>
-        <p>&copy; 2023 Naawi-Oodena. All rights reserved.</p>
-        <p>Website by [Your Name]</p>
-        <p>Last updated: October 2023</p>
-        
+  <header class="site-header">
+    <h1>Naawi-Oodena</h1>
+    <nav class="primary-nav">
+      <div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="residential.html">Residential</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <div class="contact-container">
+      <div class="floating-elements">
+        <div class="floating-element element-1"></div>
+        <div class="floating-element element-2"></div>
+        <div class="floating-element element-3"></div>
+      </div>
+      
+      <div class="contact-header">
+        <h2>We'd Love to Hear From You</h2>
+        <p>Reach out to the Naawi-Oodena development team with your questions, comments, or interest in being part of Canada's largest urban reserve community.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required placeholder="First and Last Name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(204) 555-1234">
+            </div>
+            
+            <div class="form-group">
+              <label for="interest">I'm interested in:</label>
+              <select id="interest" name="interest">
+                <option value="">Select an option</option>
+                <option value="residential">Residential Opportunities</option>
+                <option value="commercial">Commercial Leasing</option>
+                <option value="partnership">Business Partnerships</option>
+                <option value="employment">Employment Opportunities</option>
+                <option value="media">Media Inquiries</option>
+                <option value="general">General Information</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h3>Visit Us</h3>
+              <p>Naawi-Oodena Development Office<br>
+              2500 Grant Avenue<br>
+              Winnipeg, MB R3P 1Y6</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div class="info-content">
+              <h3>Call Us</h3>
+              <p>Main Office: <a href="tel:+12045551234">(204) 555-1234</a><br>
+              Toll Free: <a href="tel:+18005551234">1-800-555-1234</a></p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div class="info-content">
+              <h3>Email Us</h3>
+              <p>General Inquiries: <a href="mailto:info@naawioodena.ca">info@naawioodena.ca</a><br>
+              Media Relations: <a href="mailto:media@naawioodena.ca">media@naawioodena.ca</a></p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">🕒</div>
+            <div class="info-content">
+              <h3>Office Hours</h3>
+              <p>Monday-Friday: 8:30 AM - 4:30 PM<br>
+              Saturday: 10:00 AM - 2:00 PM<br>
+              Sunday: Closed</p>
+            </div>
+          </div>
+          
+          <div class="cultural-note">
+            <h3>Cultural Protocol Note</h3>
+            <p>We welcome traditional forms of communication. If you prefer to contact us through ceremonial protocols or would like to arrange a meeting with Elders, please indicate this in your message and we will respond accordingly.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.123456789012!2d-97.12345678901234!3d49.87654321098765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDUyJzM1LjYiTiA5N8KwMDcnNDEuNiJX!5e0!3m2!1sen!2sca!4v1234567890123!5m2!1sen!2sca" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2023 Naawi-Oodena Development | Created by Daniel Aduayi</p>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
