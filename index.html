@@ -1,83 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Naawi-Oodena - Canada's largest urban reserve development in Winnipeg, Manitoba">
-  <meta name="keywords" content="Naawi-Oodena, urban reserve, Treaty One, Indigenous development">
   <title>Naawi-Oodena | Centre of the Heart | Treaty One Development</title>
-  
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
-  
-  <!-- Google Fonts -->
+  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  
-  <!-- Internal CSS for page-specific styles -->
-  <style>
-    /* Internal CSS example (required by rubric) */
-    .development-card {
-      transition: transform 0.3s ease;
-    }
-    .development-card:hover {
-      transform: translateY(-5px);
-    }
-  </style>
+<style>
+  div{background-color: aliceblue;
+ 
+</style>
 </head>
 
 <body>
-  <!-- Skip link for accessibility -->
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
   <header class="site-header">
-    <div class="header-container">
+ 
       <h1>Naawi-Oodena</h1>
-      
-      <!-- Mobile menu button -->
-      <button class="menu-toggle" aria-label="Mobile menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      
-      <nav class="primary-nav" aria-label="Main navigation">
+      <nav class="primary-nav">
+        <div>
         <ul>
           <li><a href="index.html" class="active" aria-current="page">Home</a></li>
           <li><a href="residential.html">Residential</a></li>
-          <li><a href="commercial.html">Commercial</a></li>
-          <li><a href="cultural.html">Cultural</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
+        </div>
       </nav>
-    </div>
   </header>
 
-  <main id="main-content" class="main-container">
+  <main class="main-container">
     <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-content">
-        <h2 id="hero-heading">Welcome to Naawi-Oodena</h2>
+    <section class="hero">
+     
+        <h2>Welcome to Naawi-Oodena</h2>
         <p class="subtitle">Canada's largest urban reserve for peace and unity</p>
-        <a href="#development-areas" class="button">Explore Our Vision</a>
-      </div>
+    
     </section>
 
     <!-- Intro Section -->
-    <section class="intro-section" aria-labelledby="intro-heading">
+    <section class="intro-section">
       <div class="section-container">
-        <h2 id="intro-heading" class="visually-hidden">About Naawi-Oodena</h2>
         
-        <figure>
-          <img src="https://winnipeg.citynews.ca/wp-content/blogs.dir/sites/13/Naawi-Oodena-urban-reserve-2.jpg" 
-               alt="Aerial view of Naawi-Oodena master plan showing green spaces and development areas" 
-               class="img-feature"
-               width="1200"
-               height="675">
-          <figcaption>Master plan vision for Naawi-Oodena</figcaption>
-        </figure>
-        
+        <img src="https://winnipeg.citynews.ca/wp-content/blogs.dir/sites/13/Naawi-Oodena-urban-reserve-2.jpg" 
+            alt="Naawi-Oodena Master Plan" 
+            class="img-feature" />
         <div class="text-content">
           <p>
             Naawi-Oodena is a unique urban reserve located on the former Kapyong Barracks site in Winnipeg, Manitoba. 
@@ -90,103 +58,111 @@
     </section>
 
     <!-- Development Areas -->
-    <section id="development-areas" class="development-section" aria-labelledby="development-heading">
+    <section class="development-section">
       <div class="section-container">
-        <h2 id="development-heading">Main Development Areas</h2>
-        
+        <h2>Main Development Areas</h2>
         <div class="development-grid">
-          <article class="development-card">
+          <div class="development-card">
             <h3>Residential Living</h3>
             <p>A welcoming neighborhood for Indigenous and non-Indigenous residents alike.</p>
-            <ul>
-              <li>Affordable housing</li>
-              <li>Mixed-density design</li>
-              <li>Eco-friendly homes</li>
-            </ul>
-          </article>
-          
-          <article class="development-card">
-            <h3>Commercial Space</h3>
+          </div>
+          <div class="development-card">
+            <h3>Mixed-use Commercial Space</h3>
             <p>Shops, restaurants, and services that create economic opportunities.</p>
-            <ul>
-              <li>Indigenous-owned businesses</li>
-              <li>Community market space</li>
-            </ul>
-          </article>
-          
-          <article class="development-card">
+          </div>
+          <div class="development-card">
             <h3>Community and Culture</h3>
-            <p>Gathering spaces to celebrate Indigenous identity and traditions.</p>
+            <p>Gathering spaces to celebrate Indigenous identity, stories, and traditions:</p>
             <ul>
               <li>Cultural Centre</li>
-              <li>Public gathering places</li>
+              <li>Public gathering place</li>
+              <li>Parks and trails</li>
             </ul>
-          </article>
+          </div>
+          <div class="development-card">
+            <h3>Recreation and Sports</h3>
+            <p>Green spaces, walking paths, and places for sports and wellness.</p>
+          </div>
+          <div class="development-card">
+            <h3>Education and Learning</h3>
+            <p>Schools and cultural learning centers for all ages.</p>
+          </div>
         </div>
-        
         <p class="source"><strong>Source:</strong> <a href="https://treaty1.ca/" target="_blank" rel="noopener noreferrer">Naawi-Oodena Master Plan PDF</a></p>
       </div>
     </section>
 
     <!-- Video Section -->
-    <section class="video-section" aria-labelledby="video-heading">
+    <section class="video-section">
       <div class="section-container">
-        <h2 id="video-heading">Learn More About Our Vision</h2>
-        
+        <h2>Learn More About Our Vision</h2>
         <div class="videos-container">
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/vQU_QydOUIw" 
-                    title="Video tour of Naawi-Oodena development plans" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/vQU_QydOUIw" title="Naawi-Oodena Development Video" allowfullscreen></iframe>
           </div>
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/GfUGDEJbd1E" 
-                    title="Interview with Treaty One Nation leaders about the development" 
-                    allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/GfUGDEJbd1E" title="Treaty One Nation Development" allowfullscreen></iframe>
+          </div>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/cwM08UJRQR0" title="Urban Reserve Development" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Why It Matters -->
-    <section class="importance-section" aria-labelledby="importance-heading">
+    <section class="importance-section">
       <div class="section-container">
-        <h2 id="importance-heading">Why Naawi-Oodena Matters</h2>
+        <h2>Why Naawi-Oodena Matters</h2>
         <div class="importance-content">
           <p>
             This site sets a new standard for Indigenous urban development. It empowers local communities, honors history,
             and strengthens the connection between Indigenous culture and the land.
           </p>
+          <p>
+            What's unique is that Naawi-Oodena combines First Nations traditional values and cultures with modern city planning 
+            processes like zoning, roads, and green infrastructure.
+          </p>
         </div>
         <p class="source"><strong>Source:</strong> <a href="https://www.youtube.com/watch?v=cwM08UJRQR0" target="_blank" rel="noopener noreferrer">Treaty One on YouTube</a></p>
       </div>
     </section>
+
+    <!-- The Finished Product -->
+    <section class="finished-section">
+      <div class="section-container">
+        <h2>The Finished Community</h2>
+        <div class="finished-content">
+          <p>
+            Naawi-Oodena has become a thriving, modern community that blends Indigenous culture with urban living. 
+            As Canada's largest urban reserve, it now stands as a powerful symbol of reconciliation and self-determination for the Treaty One First Nations.
+          </p>
+          <p>
+            The residential area features a wide variety of homes, including detached houses, townhomes, stacked townhouses, and apartment buildings. 
+            Families of all sizes found suitable housing, with many units designed to be affordable and inclusive.
+          </p>
+          <p>
+            The partnership between Treaty One, Canada Lands Company, and the City of Winnipeg ensured that a strong mix of market-rate and affordable 
+            housing was available from the start. The first residential phase was a major success, adding 260 housing units just north of Taylor Avenue.
+          </p>
+          <p>
+            The design encouraged community engagement with walking paths, green spaces, and a layout that connects seamlessly with nearby neighborhoods like Tuxedo.
+          </p>
+        </div>
+        <p class="source"><strong>Source:</strong> <a href="https://treaty1.ca/kapyong-barracks-redevelopment/" target="_blank" rel="noopener noreferrer">Kapyong Redevelopment</a></p>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer" aria-label="Site footer">
+  <footer class="site-footer">
     <div class="footer-container">
-      <p>&copy; 2023 Naawi-Oodena Development | Created by [Your Name]</p>
-      <nav class="footer-nav" aria-label="Footer navigation">
+      <p>&copy; 2023 Naawi-Oodena Development | Created by Daniel Aduayi</p>
+      <nav class="footer-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </footer>
-
-  <!-- Simple JavaScript for mobile menu -->
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const primaryNav = document.querySelector('.primary-nav');
-
-    menuToggle.addEventListener('click', () => {
-      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !isExpanded);
-      primaryNav.classList.toggle('active');
-    });
-  </script>
 </body>
 </html>
