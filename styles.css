@@ -104,10 +104,15 @@ z-index:100
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:var(--spacing-sm) 0
+padding:var(--spacing-sm) 0        
 }
 
-
+.header-container {
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:var(--spacing-sm) 0
+}
 
 .site-header h1 {
 font-size:1.8rem;
