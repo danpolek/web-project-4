@@ -80,7 +80,6 @@ padding:0 var(--spacing-md)
 .section-container {
 padding:var(--spacing-xl) 0;
 background-image:url(https://wallpapercave.com/wp/au3yaTy.jpg);
-background-repeat:no-repeat;
 background-size:cover;
 background-position:center
 }
