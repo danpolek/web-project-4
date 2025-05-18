@@ -1,64 +1,48 @@
 /* This color palette was chosen to represent Naawi-Oodena’s cultural and environmental values. */
 /* 
-This palette uses an **analogous color scheme**, combining cool blue and earthy green hues that are next to each other on the color wheel. This creates a harmonious and unified look, while the warm sand accent adds subtle contrast without clashing. 
-*/
-
 /* 
-============= COLOR THEORY RATIONALE =============
-
-Color Palette Selection for Naawi-Oodena:
-
+============= REVISED SUNSET EARTH PALETTE =============
+This palette draws from:
+- Prairie sunset colors (rich reds, golden yellows)
+- Traditional Indigenous beadwork palettes
+- The Four Directions colors (sacred in many Indigenous cultures)
+- Natural pigments used in ceremonial art
 
 Primary Colors:
-- #2E5266 (Deep Blue): Represents the waters of Treaty One territory and 
-  symbolizes trust, stability, and the strong foundation of Indigenous 
-  leadership in this development. The deep blue evokes the connection to 
-  Lake Winnipeg and the rivers that have sustained Indigenous communities 
-  for generations.
+- #9E2B25 (Sunset Red): Represents the heartline, vitality, and the 
+  sacred red ochre used in ceremonies. This bold color symbolizes both 
+  warning and welcome.
 
-- #6E9887 (Earthy Green): Reflects the prairie landscape and symbolizes 
-  growth, renewal, and environmental stewardship. This connects to the 
-  Indigenous value of respecting and protecting the land while creating 
-  sustainable urban spaces.
+- #E3A72F (Prairie Gold): The color of ripening prairie grasses and 
+  medicinal plants, representing abundance and the gifts of the earth.
 
 Accent Color:
-- #D3B88C (Warm Sand): Represents the clay banks of the Red River and 
-  provides warmth and energy to the palette. This earthy tone grounds the 
-  design in the local geography while creating visual interest.
+- #5B8234 (Sage Brush): A restorative green from traditional medicines, 
+  representing growth and healing.
 
 Supporting Colors:
-- #F4F4F4 (Light Gray): Provides a clean, neutral background that ensures 
-  content remains the focus while maintaining excellent readability.
+- #F7E8D4 (Buckskin): A warm cream reminiscent of tanned hides, providing 
+  a soft, natural background.
 
-- #1D1D1D (Near Black): Used for text to create strong contrast while being 
-  softer than pure black, reducing eye strain.
-
-Color Psychology:
-The combination of cool blues (trust, stability) with warm earth tones 
-(community, growth) creates a balanced palette that reflects Naawi-Oodena's 
-dual nature as both a modern urban development and a culturally rooted 
-Indigenous community.
-
-Accessibility:
-All color combinations meet WCAG AA contrast standards (minimum 4.5:1), with 
-primary buttons achieving AAA (7:1) for maximum accessibility. The palette 
-was tested for color blindness compatibility.
+- #2A1A1F (Blackberry Deep): A rich near-black with purple undertones 
+  found in traditional berry dyes, used for text.
 
 Cultural Significance:
-The colors were carefully selected to honor Treaty One territory's natural 
-landscapes while creating a contemporary aesthetic that represents the 
-forward-looking vision of this development.
-
+This palette reflects the colors seen in traditional storytelling, beadwork, 
+and the natural cycles of the prairie. The sunset colors honor the daily 
+transition that's sacred in many Indigenous traditions.
 ================================================== 
 */
 
 :root {
-  --primary: #2E5266;
-  --secondary: #00690e;
-  --accent: #D3B88C;
-  --light: #F4F4F4;
-  --dark: #1D1D1D;
-  --white: #FFFFFF;
+  --primary: #9E2B25;       /* Sunset Red */
+  --secondary: #E3A72F;     /* Prairie Gold */
+  --accent: #5B8234;        /* Sage Brush */
+  --light: #F7E8D4;         /* Buckskin */
+  --dark: #2A1A1F;          /* Blackberry Deep */
+  --white: #000000;
+  
+  /* Keeping existing font and spacing variables */
   --font-heading: 'Roboto', sans-serif;
   --font-body: 'Open Sans', sans-serif;
   --spacing-xs: 0.5rem;
@@ -70,7 +54,7 @@ forward-looking vision of this development.
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
 }
-
+/* ===== GLOBAL STYLES ===== */
 * {
   margin: 0;
   padding: 0;
@@ -86,7 +70,8 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   color: var(--dark);
-  background-image: url('img/darkkids.png');
+  background-color: var(--secondary);
+    background-image: url(img/darkkids.png);
   overflow-x: hidden;
 }
 .skip-link {
@@ -125,7 +110,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--accent);
   transition: var(--transition);
 }
 
@@ -237,7 +222,7 @@ a:hover {
 }
 
 .card {
-  background: var(--white);
+  background: white;
   padding: var(--spacing-lg);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
