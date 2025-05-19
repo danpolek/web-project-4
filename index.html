@@ -18,15 +18,92 @@
 
     div {
       background-color: rgb(255, 255, 255);
-      margin: 0 auto;
+      max-width: 1200px;
+      margin: 0;
       padding: 20px;
       border-radius: 20px;
     }
+    /* ===== IMAGE STYLES ===== */
+    #container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  .img-rounded {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 500px;
+    height: 100%;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .img-rounded:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+ 
+
+  
+  .hero-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    filter: brightness(0.8);
+  }
+
+  .testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #E8C547;
+    margin: 0 auto 15px;
+    display: block;
+  }
+
+  .hover-zoom {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-zoom:hover {
+    transform: scale(1.03);
+  }
+
+  .img-border-accent {
+    border: 2px solid #E8C547;
+    padding: 5px;
+    background: white;
+  }
+
+  .img-drop-shadow {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  }
+
+  /* Responsive image adjustments */
+  @media (max-width: 768px) {
+    .img-rounded {
+      border-radius: 8px;
+    }
+    
+    .card-img {
+      height: 150px;
+    }
+  }
   </style>
 </head>
 
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="contact.html" class="skip-link">Skip to main content</a>
 
   <header class="site-header">
     <section class="container header-container">
@@ -58,7 +135,7 @@
         <h2 class="text-center">The Completed Naawi-Oodena</h2>
         <div class="grid-2-col">
           <div>
-            <img src="" 
+            <img src="img/odenafinished.png" 
                  alt="Aerial view of completed Naawi-Oodena development" 
                  class="img-rounded">
             <p class="source">Source: CNN - Canada's largest urban reserve opens in Winnipeg (2023)</p>
@@ -116,10 +193,9 @@
         <h2 class="text-center">Explore Our Completed Community</h2>
         
         <div class="development-highlight">
-          <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-f72c-6230-9796-67a6ee1cc714/raw?se=2025-05-17T20%3A45%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=61180a4f-34a9-42b7-b76d-9ca47d89946d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-17T18%3A53%3A11Z&ske=2025-05-18T18%3A53%3A11Z&sks=b&skv=2024-08-04&sig=qSlZq%2BNYssaz0/YKPBRvPmjb%2BYH5jNdkC8PljDlDRZ4%3D" 
-               alt="Completed residential neighborhood" 
-               class="development-img">
-          <div>
+          <img src="img/neigbor.png" 
+     alt="Completed residential neighborhood" 
+     class="development-img hover-zoom">
             <h3>Residential Living</h3>
             <p>Our completed residential areas now house over 8,000 residents in a carefully planned mix of housing types designed to create diverse, inclusive neighborhoods. The residential districts were planned using Indigenous principles of community design, with circular layouts that encourage social interaction and connection to nature. All homes feature energy-efficient designs that incorporate traditional knowledge about passive solar heating and natural ventilation.</p>
             
@@ -140,9 +216,9 @@
         </div>
         
         <div class="development-highlight reverse">
-          <img src="https://www.winnipegfreepress.com/wp-content/uploads/2023/07/05/naawi-oodena-commercial.jpg" 
-               alt="Completed commercial district" 
-               class="development-img">
+          <img src="img/cityground.png" 
+     alt="Completed commercial district" 
+     class="development-img hover-zoom">
           <div>
             <h3>Thriving Commercial District</h3>
             <p>Our completed 1.5 million sq ft commercial space has become an economic engine for the region while maintaining strong Indigenous cultural identity. The commercial district was designed to reflect traditional trading principles, with open plazas that encourage interaction and relationship-building between business owners and customers. The architecture incorporates traditional materials like cedar and stone alongside modern elements.</p>
@@ -160,14 +236,13 @@
             <p>The commercial district has become a regional destination, attracting over 1 million visitors annually who come to experience authentic Indigenous commerce, cuisine, and culture. Special business incubator programs have helped launch over 75 new Indigenous-owned businesses in the past two years alone, creating a vibrant entrepreneurial ecosystem.</p>
             
             <p class="source">Source: Naawi-Oodena Commercial Report (2025)</p>
-            <a href="commercial.html" class="btn btn-secondary">Explore Commercial Spaces</a>
           </div>
         </div>
         
         <div class="development-highlight">
-          <img src="https://www.cbc.ca/newscontent/2.1216/image/1688583008972.jpg" 
-               alt="Cultural center and gathering space" 
-               class="development-img">
+          <img style="width: 900px;" src="img/cityground.png" 
+     alt="Cultural center and gathering space" 
+     class="development-img hover-zoom">
           <div>
             <h3>Vibrant Community Spaces</h3>
             <p>Our completed cultural and community facilities serve as the heart of Naawi-Oodena, providing spaces for learning, celebration, and connection. These spaces were designed through extensive community consultation to ensure they meet the needs of all residents while honoring traditional ways of gathering. The community spaces incorporate Indigenous knowledge about spatial relationships and ceremonial needs.</p>
@@ -186,7 +261,6 @@
             <p>The community spaces have become hubs of cultural revitalization, with daily language classes, traditional craft workshops, and intergenerational knowledge sharing. The design of these spaces incorporates sacred geometry and traditional architectural elements like circular forms and east-facing entrances, creating environments that feel authentically Indigenous while serving modern community needs.</p>
             
             <p class="source">Source: Naawi-Oodena Community Report (2025)</p>
-            <a href="community.html" class="btn btn-secondary">Visit Community Spaces</a>
           </div>
         </div>
       </div>
@@ -218,7 +292,7 @@
             <p class="source">Source: Naawi-Oodena Sustainability Report (2025)</p>
           </div>
           <div>
-            <img src="https://cdn.corenexis.com/view/?img=mm/ma17/DmAWyT.png" 
+            <img src="img/74eeaddc-5395-4213-9c15-014eb8b56372.png" 
                  alt="Sustainable features of the completed development" 
                  class="img-rounded">
           </div>
@@ -227,9 +301,11 @@
     </section>
     
     <div>
-      <iframe width="600" height="315" src="https://www.youtube.com/embed/VJ2McBhffXY?si=CnTOr3_0-Ld4LFkf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe width="600" height="315" src="https://www.youtube.com/embed/cwM08UJRQR0?si=p0DCft0npJ7R3FFb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe width="600" height="315" src="https://www.youtube.com/embed/ODH13-YOeyE?si=9WhHv7bFVjc21yTS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="video-container">
+  <iframe width="600" height="315" src="https://www.youtube.com/embed/VJ2McBhffXY" class="hover-zoom"></iframe>
+  <iframe width="600" height="315" src="https://www.youtube.com/embed/cwM08UJRQR0" class="hover-zoom"></iframe>
+  <iframe width="600" height="315" src="https://www.youtube.com/embed/ODH13-YOeyE" class="hover-zoom"></iframe>
+</div>
     </div>
     
     <!-- Community Testimonials -->
@@ -278,8 +354,6 @@
   <footer class="site-footer">
     <div class="container text-center">
       <p>&copy; 2025 Naawi-Oodena. All rights reserved.</p>
-      <p>Treaty One Territory, Winnipeg, Manitoba, Canada</p>
-      <p>Phone: (204) 555-ODEN | Email: info@naawioodena.ca</p>
     </div>
   </footer>
 </body>
