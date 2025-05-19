@@ -10,6 +10,54 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    .video-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-container iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Center container divs */
+.container, #container, .development-highlight {
+  max-width: 1200px;    /* or 900px for smaller content */
+  margin: 0 auto;       /* centers horizontally */
+  padding: 20px;
+  text-align: center;   /* centers inline content like text and inline-block elements */
+}
+
+/* For images inside these containers */
+.container img,
+#container img,
+.development-highlight img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optional: Flexbox centering for development-highlight if you want side-by-side centering */
+.development-highlight {
+  display: flex;
+  flex-direction: column; /* or row if you want side-by-side */
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical centering */
+  gap: 20px;
+  max-width: 1200px;        /* smaller max width */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Text centering utility */
+.text-center {
+  text-align: center;
+}
+
+
     /* Basic Reset */
     body {
       font-family: 'Roboto', sans-serif;
@@ -103,7 +151,7 @@
 </head>
 
 <body>
-  <a href="contact.html" class="skip-link">Skip to main content</a>
+  <a href="main" class="skip-link">Skip to main content</a>
 
   <header class="site-header">
     <section class="container header-container">
@@ -216,7 +264,7 @@
         </div>
         
         <div class="development-highlight reverse">
-          <img src="img/cityground.png" 
+          <img src="img/district.png" 
      alt="Completed commercial district" 
      class="development-img hover-zoom">
           <div>
