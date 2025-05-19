@@ -92,31 +92,34 @@ body {
 
 
 /* ===== TYPOGRAPHY ===== */
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
-  line-height: 1.2;
-  margin-bottom: var(--spacing-sm);
-  color: var(--dark);
+/* Enhanced Typography */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  font-size: 1rem; /* 16px base */
+  color: #333; /* Dark gray for better readability */
 }
 
 h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
 h4 { font-size: 1.25rem; }
-
 p {
-  margin-bottom: var(--spacing-sm);
+  max-width: 65ch; /* Optimal line length */
+  margin-bottom: 1.5em;
 }
 
-a {
-  text-decoration: none;
-  color: var(--accent);
-  transition: var(--transition);
+/* Font weights */
+h1, h2, h3 {
+  font-weight: 700; /* Bold */
 }
 
-a:hover {
-  color: var(--accent);
-  text-decoration: underline;
+p, li {
+  font-weight: 400; /* Regular */
+}
+
+strong {
+  font-weight: 600; /* Semi-bold */
 }
 
 /* ===== LAYOUT ===== */
