@@ -44,9 +44,9 @@ transition that's sacred in many Indigenous traditions.
   --accent: #5B8234;        /* Sage Brush */
   --light: #F7E8D4;         /* Buckskin */
   --dark: #2A1A1F;          /* Blackberry Deep */
-  --white: #000000;
+  --white: #000000;         /* Note: This is actually black, consider renaming */
   
-  /* Keeping existing font and spacing variables */
+  /* Font and spacing variables */
   --font-heading: 'Roboto', sans-serif;
   --font-body: 'Open Sans', sans-serif;
   --spacing-xs: 0.5rem;
@@ -57,35 +57,43 @@ transition that's sacred in many Indigenous traditions.
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
-  --font-heading: 'Roboto', sans-serif;
---font-body: 'Open Sans', sans-serif;
+  /* Vendor prefixes for box-shadow */
   -webkit-box-shadow: var(--box-shadow);
--moz-box-shadow: var(--box-shadow);
-box-shadow: var(--box-shadow);
-
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
 }
-/* ===== GLOBAL STYLES ===== */
+
+/* =========================
+   GLOBAL STYLES & RESET
+   ========================= */
+
+/* Remove default margin/padding and set box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Smooth scrolling and base font size */
 html {
   scroll-behavior: smooth;
   font-size: 16px;
 }
 
+/* Body base styles */
 body {
   font-family: var(--font-body);
   line-height: 1.6;
   font-size: 1rem;
-  color: var(--dark); /* Keep palette consistent */
+  color: var(--dark); /* Use palette color */
   background-color: var(--secondary);
   background-image: url(img/darkkids.png);
   overflow-x: hidden;
 }
 
+/* =========================
+   ACCESSIBILITY: SKIP LINK
+   ========================= */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -97,39 +105,42 @@ body {
   transition: top 0.3s ease;
   font-weight: 600;
 }
-
 .skip-link:focus {
   top: 0;
 }
 
+/* =========================
+   TYPOGRAPHY
+   ========================= */
 
-/* ===== TYPOGRAPHY ===== */
-/* Enhanced Typography */
-
-
+/* Headings */
 h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
 h4 { font-size: 1.25rem; }
+
+/* Paragraphs */
 p {
-  max-width: 65ch; /* Optimal line length */
+  max-width: 65ch; /* Optimal line length for readability */
   margin-bottom: 1.5em;
 }
 
-/* Font weights */
+/* Font weights for headings and body */
 h1, h2, h3 {
-  font-weight: 700; /* Bold */
+  font-weight: 700;
 }
-
 p, li {
-  font-weight: 400; /* Regular */
+  font-weight: 400;
 }
-
 strong {
-  font-weight: 600; /* Semi-bold */
+  font-weight: 600;
 }
 
-/* ===== LAYOUT ===== */
+/* =========================
+   LAYOUT UTILITIES
+   ========================= */
+
+/* Container for page sections */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -137,16 +148,19 @@ strong {
   padding: 0 var(--spacing-md);
 }
 
-
+/* Section padding */
 .section {
   padding: var(--spacing-xl) 0;
 }
 
+/* Center text utility */
 .text-center {
   text-align: center;
 }
 
-/* ===== HEADER ===== */
+/* =========================
+   HEADER STYLES
+   ========================= */
 .site-header {
   background-color: var(--white);
   box-shadow: var(--box-shadow);
@@ -156,6 +170,7 @@ strong {
   background-image: url(img/darkkids.png);
 }
 
+/* Flex container for header content */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -163,12 +178,14 @@ strong {
   padding: var(--spacing-sm) 0;
 }
 
+/* Logo styles */
 .site-logo {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--dark);
 }
 
+/* Hamburger menu button (hidden on desktop) */
 .menu-toggle {
   display: none;
   background: none;
@@ -178,25 +195,26 @@ strong {
   color: var(--primary);
 }
 
+/* Navigation styles */
 .primary-nav ul {
   display: flex;
   gap: var(--spacing-md);
   list-style: none;
 }
-
 .primary-nav a {
   font-weight: 600;
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--border-radius);
 }
-
 .primary-nav a.active,
 .primary-nav a:hover {
   background-color: var(--primary);
   color: var(--white);
 }
 
-/* ===== HERO ===== */
+/* =========================
+   HERO SECTION
+   ========================= */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url('img/darkkids.png') no-repeat center center/cover;
@@ -206,39 +224,43 @@ strong {
   color: var(--white);
   text-align: center;
 }
-
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
   padding: var(--spacing-md);
 }
-
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: var(--spacing-sm);
   color: var(--white);
 }
-
 .hero .subtitle {
   font-size: 1.2rem;
   margin-bottom: var(--spacing-md);
 }
 
-/* ===== CARDS ===== */
+/* =========================
+   CARD GRID & CARDS
+   ========================= */
+
+/* Responsive grid for cards */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-md);
   margin-top: var(--spacing-xl);
 }
+
+/* Card animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
-
 .card {
   animation: fadeIn 0.5s ease-out;
 }
+
+/* Card styles */
 .card {
   background: white;
   padding: var(--spacing-lg);
@@ -246,15 +268,14 @@ strong {
   box-shadow: var(--box-shadow);
   transition: var(--transition);
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== BUTTONS ===== */
-
-
+/* =========================
+   BUTTONS
+   ========================= */
 .btn {
   display: inline-block;
   padding: var(--spacing-sm) var(--spacing-md);
@@ -265,28 +286,26 @@ strong {
   border: none;
   cursor: pointer;
 }
-
 .btn-primary {
   background-color: var(--primary);
   color: var(--white);
 }
-
 .btn-primary:hover {
   background-color: var(--secondary);
   color: var(--white);
 }
-
 .btn-secondary {
   background-color: var(--accent);
   color: var(--dark);
 }
-
 .btn-secondary:hover {
   background-color: var(--primary);
   color: var(--white);
 }
 
-/* ===== FOOTER ===== */
+/* =========================
+   FOOTER STYLES
+   ========================= */
 .site-footer {
   background-color: var(--primary);
   color: var(--white);
@@ -294,49 +313,48 @@ strong {
   text-align: center;
   background-image: url(img/darkkids.png);
 }
-
 .footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-md);
 }
-
 .footer-nav ul {
   display: flex;
   gap: var(--spacing-md);
   list-style: none;
 }
-
 .footer-nav a {
   color: var(--white);
 }
-
 .footer-nav a:hover {
   color: var(--accent);
 }
 
-/* ===== RESPONSIVE ===== */
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
 @media (max-width: 768px) {
+  /* Stack header content vertically on mobile */
   .header-container {
     flex-direction: column;
     align-items: flex-start;
   }
-
+  /* Show hamburger menu on mobile */
   .menu-toggle {
     display: block;
   }
-
+  /* Hide nav links by default on mobile */
   .primary-nav ul {
     display: none;
     flex-direction: column;
     width: 100%;
   }
-
+  /* Show nav links when nav is active */
   .primary-nav.active ul {
     display: flex;
   }
-
+  /* Smaller hero heading on mobile */
   .hero h2 {
     font-size: 2rem;
   }
