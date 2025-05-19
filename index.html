@@ -1,61 +1,70 @@
+<!--Name: Daniel Aduayi
+Course: PTEC
+Teacher: Ms. Hoitink
+School: PTC
+Date Last Modified: April 10, 2025 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Naawi-Oodena - Canada's largest completed urban reserve in Winnipeg, Manitoba">
-  <title>Naawi-Oodena | Centre of the Heart | Completed Development</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Document Metadata -->
+  <meta charset="UTF-8"> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport -->
+  <meta name="description" content="Naawi-Oodena - Canada's largest completed urban reserve in Winnipeg, Manitoba"> <!-- SEO description -->
+  <title tabindex="0">Naawi-Oodena | Centre of the Heart | Completed Development</title> <!-- Page title with tabindex for screen readers -->
+  
+  <!-- External Resources -->
+  <link rel="stylesheet" href="styles.css"> <!-- Main stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Google Fonts preconnect -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> <!-- Font imports -->
+  
   <style>
     /* ===== TYPOGRAPHY ENHANCEMENTS ===== */
     /* Center container divs */
-.container, #container, .development-highlight {
-  max-width: 1200px;    /* or 900px for smaller content */
-  margin: 0 auto;       /* centers horizontally */
-  padding: 20px;
-  text-align: center;   /* centers inline content like text and inline-block elements */
-}
+    .container, #container, .development-highlight {
+      max-width: 1200px;    /* Maximum content width */
+      margin: 0 auto;       /* Horizontal centering */
+      padding: 20px;        /* Internal spacing */
+      text-align: center;   /* Text alignment */
+    }
 
-/* For images inside these containers */
-.container img,
-#container img,
-.development-highlight img {
-  display: block;
-  margin: 0 auto 20px;
-  max-width: 100%;
-  height: auto;
-}
+    /* Image container styles */
+    .container img,
+    #container img,
+    .development-highlight img {
+      display: block;             /* Block display for proper spacing */
+      margin: 0 auto 20px;        /* Centered with bottom margin */
+      max-width: 100%;            /* Responsive width */
+      height: auto;               /* Maintain aspect ratio */
+    }
 
-/* Optional: Flexbox centering for development-highlight if you want side-by-side centering */
-.development-highlight {
-  display: flex;
-  flex-direction: column; /* or row if you want side-by-side */
-  justify-content: center; /* horizontal centering */
-  align-items: center;     /* vertical centering */
-  gap: 20px;
-  max-width: 1200px;        /* smaller max width */
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
+    /* Development highlight section layout */
+    .development-highlight {
+      display: flex;              /* Flex layout */
+      flex-direction: column;     /* Vertical stacking */
+      justify-content: center;    /* Vertical centering */
+      align-items: center;        /* Horizontal centering */
+      gap: 20px;                  /* Space between items */
+      max-width: 1200px;          /* Content width limit */
+      margin: 0 auto;             /* Centering */
+      padding: 20px;              /* Internal spacing */
+      text-align: center;         /* Text alignment */
+    }
 
-/* Text centering utility */
-.text-center {
-  text-align: center;
-}
+    /* Utility class for centered text */
+    .text-center {
+      text-align: center;
+    }
 
-
-    /* Basic Reset */
-       body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      letter-spacing: 0.3px; /* Base letter spacing for all text */
-      word-spacing: 0.5px; /* Base word spacing for all text */
+    /* ===== BASE STYLES ===== */
+    body {
+      font-family: 'Roboto', sans-serif;  /* Primary font */
+      line-height: 1.6;                   /* Base line height */
+      letter-spacing: 0.3px;              /* Character spacing */
+      word-spacing: 0.5px;                /* Word spacing */
     }
     
+    /* Heading typography */
     h1, h2, h3, h4 {
       letter-spacing: 0.5px;
       word-spacing: 1px;
@@ -66,12 +75,14 @@
       word-spacing: 1.5px;
     }
     
+    /* Paragraph styling */
     p {
       letter-spacing: 0.4px;
       word-spacing: 0.8px;
-      line-height: 1.7; /* Slightly increased line height */
+      line-height: 1.7; /* Improved readability */
     }
     
+    /* Hero section typography */
     .hero h2 {
       letter-spacing: 1.2px;
       word-spacing: 2px;
@@ -82,30 +93,35 @@
       word-spacing: 1.2px;
     }
     
+    /* Card heading styling */
     .card h3 {
       letter-spacing: 0.6px;
     }
     
+    /* Button typography */
     .btn {
       letter-spacing: 0.8px;
     }
     
+    /* Testimonial blockquote styling */
     blockquote {
       letter-spacing: 0.4px;
       word-spacing: 0.8px;
       line-height: 1.8;
     }
     
+    /* Testimonial author styling */
     .testimonial-author {
       letter-spacing: 0.5px;
     }
     
+    /* Source citation styling */
     .source {
       letter-spacing: 0.3px;
       word-spacing: 0.5px;
     }
     
-    /* Rest of your existing styles... */
+    /* Video container layout */
     .video-container {
       display: block;
       gap: 20px;
@@ -114,343 +130,363 @@
       justify-self: center;
     }
     
-     div {
+    /* Content container styling */
+    div {
       background-color: rgb(255, 255, 255);
       max-width: 1200px;
       margin: 0;
       padding: 20px;
       border-radius: 20px;
     }
-    /* ===== IMAGE STYLES ===== */
+    
+    /* Image container styling */
     #container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     }
-  .img-rounded {
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 500px;
-    height: 100%;
-    display: block;
-    margin: 0 auto 20px;
-  }
-
-  .img-rounded:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-  .card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
- 
-
-  
-  .hero-img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    filter: brightness(0.8);
-  }
-
-  .testimonial-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #E8C547;
-    margin: 0 auto 15px;
-    display: block;
-  }
-
-  .hover-zoom {
-    transition: transform 0.3s ease;
-  }
-
-  .hover-zoom:hover {
-    transform: scale(1.03);
-  }
-
-  .img-border-accent {
-    border: 2px solid #E8C547;
-    padding: 5px;
-    background: white;
-  }
-
-  .img-drop-shadow {
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-  }
-
-  /* Responsive image adjustments */
-  @media (max-width: 768px) {
+    
+    /* Rounded image styling */
     .img-rounded {
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 500px;
+      height: 100%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    /* Rounded image hover effect */
+    .img-rounded:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     }
     
+    /* Card image styling */
     .card-img {
-      height: 150px;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-  }
+    
+    /* Hero image styling */
+    .hero-img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      filter: brightness(0.8);
+    }
+
+    /* Testimonial image styling */
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #E8C547;
+      margin: 0 auto 15px;
+      display: block;
+    }
+
+    /* Hover zoom effect */
+    .hover-zoom {
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover zoom active state */
+    .hover-zoom:hover {
+      transform: scale(1.03);
+    }
+
+    /* Accent border for images */
+    .img-border-accent {
+      border: 2px solid #E8C547;
+      padding: 5px;
+      background: white;
+    }
+
+    /* Drop shadow effect for images */
+    .img-drop-shadow {
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) {
+      .img-rounded {
+        border-radius: 8px;
+      }
+      
+      .card-img {
+        height: 150px;
+      }
+    }
   </style>
 </head>
 
 <body>
- <a href="#main" class="skip-link">Skip to main content</a> 
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main" class="skip-link" tabindex="1">Skip to main content</a> 
 
-  <header class="site-header">
+  <!-- Site Header -->
+  <header class="site-header" tabindex="0">
     <section class="container header-container">
-      <h1 class="site-logo">Naawi-Oodena</h1>
-      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="primary-nav">
+      <h1 class="site-logo" tabindex="0">Naawi-Oodena</h1>
+      <!-- Mobile menu toggle -->
+      <button class="menu-toggle" aria-label="Toggle navigation" tabindex="1">☰</button>
+      <!-- Primary Navigation -->
+      <nav class="primary-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-          <li><a href="residential.html">Residential</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html" class="active" aria-current="page" tabindex="1">Home</a></li>
+          <li><a href="residential.html" tabindex="1">Residential</a></li>
+          <li><a href="contact.html" tabindex="1">Contact Us</a></li>
         </ul>
       </nav>
     </section>
   </header>
 
-  <main>
+  <!-- Main Content -->
+  <main id="main" tabindex="0">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" tabindex="0">
       <div class="hero-content">
-        <h2>Welcome to Naawi-Oodena</h2>
-        <p class="subtitle">Canada's largest completed urban reserve in the heart of Treaty One Territory</p>
-        <a href="#about" class="btn btn-primary">Explore Our Community</a>
+        <h2 tabindex="0">Welcome to Naawi-Oodena</h2>
+        <p class="subtitle" tabindex="0">Canada's largest completed urban reserve in the heart of Treaty One Territory</p>
+        <a href="#about" class="btn btn-primary" tabindex="1">Explore Our Community</a>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section" tabindex="0">
       <div class="container">
-        <h2 class="text-center">The Completed Naawi-Oodena</h2>
+        <h2 class="text-center" tabindex="0">The Completed Naawi-Oodena</h2>
         <div class="grid-2-col">
-          <div>
+          <div tabindex="0">
             <img src="img/odenafinished.png" 
                  alt="Aerial view of completed Naawi-Oodena development" 
-                 class="img-rounded">
-            <p class="source">Source: CNN - Canada's largest urban reserve opens in Winnipeg (2023)</p>
+                 class="img-rounded" tabindex="0">
+            <p class="source" tabindex="0">Source: CNN - Canada's largest urban reserve opens in Winnipeg (2023)</p>
           </div>
-          <div>
-            <p>Naawi-Oodena ("Centre of the Heart" in Anishinaabemowin) is now fully realized as a vibrant 156-acre urban reserve on the former Kapyong Barracks site in Winnipeg. This $1.2 billion completed development represents the largest single return of urban land to First Nations in Canadian history, marking a significant milestone in reconciliation and Indigenous self-determination. The project was developed through a unique partnership between seven First Nations (Peguis, Sagkeeng, Brokenhead, Roseau River, Long Plain, Sandy Bay, and Swan Lake) and various levels of government.</p>
+          <div tabindex="0">
+            <p tabindex="0">Naawi-Oodena ("Centre of the Heart" in Anishinaabemowin) is now fully realized as a vibrant 156-acre urban reserve on the former Kapyong Barracks site in Winnipeg. This $1.2 billion completed development represents the largest single return of urban land to First Nations in Canadian history, marking a significant milestone in reconciliation and Indigenous self-determination. The project was developed through a unique partnership between seven First Nations (Peguis, Sagkeeng, Brokenhead, Roseau River, Long Plain, Sandy Bay, and Swan Lake) and various levels of government.</p>
             
-            <p>The development, led by Treaty One Nation, is now home to over 8,000 residents and features world-class commercial, cultural, and community spaces that honor Indigenous traditions while providing modern urban living. The community has become a model for Indigenous-led urban development, incorporating traditional knowledge with contemporary design principles. The architecture throughout Naawi-Oodena reflects Indigenous values, with buildings oriented to the four directions and public art installations that tell the stories of the Anishinaabe, Cree, Oji-Cree, Dakota, and Dene peoples who call this territory home.</p>
+            <p tabindex="0">The development, led by Treaty One Nation, is now home to over 8,000 residents and features world-class commercial, cultural, and community spaces that honor Indigenous traditions while providing modern urban living. The community has become a model for Indigenous-led urban development, incorporating traditional knowledge with contemporary design principles. The architecture throughout Naawi-Oodena reflects Indigenous values, with buildings oriented to the four directions and public art installations that tell the stories of the Anishinaabe, Cree, Oji-Cree, Dakota, and Dene peoples who call this territory home.</p>
             
-            <p class="source">Source: Treaty One Nation Annual Report (2025)</p>
+            <p class="source" tabindex="0">Source: Treaty One Nation Annual Report (2025)</p>
           </div>
         </div>
         
         <div class="card-grid mt-xl">
-          <div class="card">
-            <h3>By the Numbers</h3>
+          <div class="card" tabindex="0">
+            <h3 tabindex="0">By the Numbers</h3>
             <ul>
-              <li>3,200 completed housing units including market-rate, affordable, and social housing options</li>
-              <li>1.5 million sq ft commercial space with 65% Indigenous-owned businesses</li>
-              <li>18 acres of parks and green space featuring native prairie plants and medicinal gardens</li>
-              <li>100% renewable energy achieved through solar arrays and geothermal systems</li>
-              <li>15 km of multi-use trails connecting all neighborhoods and commercial areas</li>
+              <li tabindex="0">3,200 completed housing units including market-rate, affordable, and social housing options</li>
+              <li tabindex="0">1.5 million sq ft commercial space with 65% Indigenous-owned businesses</li>
+              <li tabindex="0">18 acres of parks and green space featuring native prairie plants and medicinal gardens</li>
+              <li tabindex="0">100% renewable energy achieved through solar arrays and geothermal systems</li>
+              <li tabindex="0">15 km of multi-use trails connecting all neighborhoods and commercial areas</li>
             </ul>
-            <p class="source">Source: City of Winnipeg Planning Department (2024)</p>
+            <p class="source" tabindex="0">Source: City of Winnipeg Planning Department (2024)</p>
           </div>
-          <div class="card">
-            <h3>Awards & Recognition</h3>
+          <div class="card" tabindex="0">
+            <h3 tabindex="0">Awards & Recognition</h3>
             <ul>
-              <li>2024 Canadian Urban Institute Excellence Award for Community Development</li>
-              <li>2025 LEED Gold Community Certification for sustainable design</li>
-              <li>2024 Indigenous Business of the Year from Canadian Council for Aboriginal Business</li>
-              <li>2025 UN-Habitat Special Recognition for Indigenous Urban Innovation</li>
-              <li>2024 Canadian Institute of Planners Award for Excellence</li>
+              <li tabindex="0">2024 Canadian Urban Institute Excellence Award for Community Development</li>
+              <li tabindex="0">2025 LEED Gold Community Certification for sustainable design</li>
+              <li tabindex="0">2024 Indigenous Business of the Year from Canadian Council for Aboriginal Business</li>
+              <li tabindex="0">2025 UN-Habitat Special Recognition for Indigenous Urban Innovation</li>
+              <li tabindex="0">2024 Canadian Institute of Planners Award for Excellence</li>
             </ul>
-            <p class="source">Source: Treaty One Nation Press Releases</p>
+            <p class="source" tabindex="0">Source: Treaty One Nation Press Releases</p>
           </div>
-          <div class="card">
-            <h3>Economic Impact</h3>
+          <div class="card" tabindex="0">
+            <h3 tabindex="0">Economic Impact</h3>
             <ul>
-              <li>$3.2 billion generated in economic activity since groundbreaking</li>
-              <li>12,000 construction jobs created with specialized training programs</li>
-              <li>5,000 permanent positions in various sectors across the community</li>
-              <li>65% Indigenous employment exceeding initial targets</li>
-              <li>$450 million in procurement contracts awarded to Indigenous businesses</li>
+              <li tabindex="0">$3.2 billion generated in economic activity since groundbreaking</li>
+              <li tabindex="0">12,000 construction jobs created with specialized training programs</li>
+              <li tabindex="0">5,000 permanent positions in various sectors across the community</li>
+              <li tabindex="0">65% Indigenous employment exceeding initial targets</li>
+              <li tabindex="0">$450 million in procurement contracts awarded to Indigenous businesses</li>
             </ul>
-            <p class="source">Source: Treaty One Economic Impact Report (2025)</p>
+            <p class="source" tabindex="0">Source: Treaty One Economic Impact Report (2025)</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Completed Development Areas -->
-    <section class="section bg-light">
+    <section class="section bg-light" tabindex="0">
       <div class="container">
-        <h2 class="text-center">Explore Our Completed Community</h2>
+        <h2 class="text-center" tabindex="0">Explore Our Completed Community</h2>
         
-        <div class="development-highlight">
+        <div class="development-highlight" tabindex="0">
           <img src="img/neigbor.png" 
-     alt="Completed residential neighborhood" 
-     class="development-img hover-zoom">
-            <h3>Residential Living</h3>
-            <p>Our completed residential areas now house over 8,000 residents in a carefully planned mix of housing types designed to create diverse, inclusive neighborhoods. The residential districts were planned using Indigenous principles of community design, with circular layouts that encourage social interaction and connection to nature. All homes feature energy-efficient designs that incorporate traditional knowledge about passive solar heating and natural ventilation.</p>
+               alt="Completed residential neighborhood" 
+               class="development-img hover-zoom" tabindex="0">
+            <h3 tabindex="0">Residential Living</h3>
+            <p tabindex="0">Our completed residential areas now house over 8,000 residents in a carefully planned mix of housing types designed to create diverse, inclusive neighborhoods. The residential districts were planned using Indigenous principles of community design, with circular layouts that encourage social interaction and connection to nature. All homes feature energy-efficient designs that incorporate traditional knowledge about passive solar heating and natural ventilation.</p>
             
-            <p>The housing mix includes:</p>
+            <p tabindex="0">The housing mix includes:</p>
             <ul>
-              <li>1,200 single-family homes with backyard gardens and solar panels</li>
-              <li>900 townhouse units arranged around shared courtyards</li>
-              <li>600 stacked townhomes with rooftop gardens</li>
-              <li>500 apartment units (30% designated as affordable housing)</li>
-              <li>200 elder-friendly units with accessibility features</li>
+              <li tabindex="0">1,200 single-family homes with backyard gardens and solar panels</li>
+              <li tabindex="0">900 townhouse units arranged around shared courtyards</li>
+              <li tabindex="0">600 stacked townhomes with rooftop gardens</li>
+              <li tabindex="0">500 apartment units (30% designated as affordable housing)</li>
+              <li tabindex="0">200 elder-friendly units with accessibility features</li>
             </ul>
             
-            <p>All residential areas are designed with Indigenous principles and sustainable features that have reduced energy use by 40% compared to conventional developments. The neighborhoods feature extensive tree planting, rain gardens for stormwater management, and community gardens that provide fresh produce while maintaining food sovereignty principles. Each residential cluster includes a shared gathering space with fire pits for storytelling and community events.</p>
+            <p tabindex="0">All residential areas are designed with Indigenous principles and sustainable features that have reduced energy use by 40% compared to conventional developments. The neighborhoods feature extensive tree planting, rain gardens for stormwater management, and community gardens that provide fresh produce while maintaining food sovereignty principles. Each residential cluster includes a shared gathering space with fire pits for storytelling and community events.</p>
             
-            <p class="source">Source: Naawi-Oodena Residential Report (2025)</p>
-            <a href="residential.html" class="btn btn-secondary">View Residential Areas</a>
+            <p class="source" tabindex="0">Source: Naawi-Oodena Residential Report (2025)</p>
+            <a href="residential.html" class="btn btn-secondary" tabindex="1">View Residential Areas</a>
           </div>
         </div>
         
-        <div class="development-highlight reverse">
+        <div class="development-highlight reverse" tabindex="0">
           <img src="img/district.png" 
-     alt="Completed commercial district" 
-     class="development-img hover-zoom">
-          <div>
-            <h3>Thriving Commercial District</h3>
-            <p>Our completed 1.5 million sq ft commercial space has become an economic engine for the region while maintaining strong Indigenous cultural identity. The commercial district was designed to reflect traditional trading principles, with open plazas that encourage interaction and relationship-building between business owners and customers. The architecture incorporates traditional materials like cedar and stone alongside modern elements.</p>
+               alt="Completed commercial district" 
+               class="development-img hover-zoom" tabindex="0">
+          <div tabindex="0">
+            <h3 tabindex="0">Thriving Commercial District</h3>
+            <p tabindex="0">Our completed 1.5 million sq ft commercial space has become an economic engine for the region while maintaining strong Indigenous cultural identity. The commercial district was designed to reflect traditional trading principles, with open plazas that encourage interaction and relationship-building between business owners and customers. The architecture incorporates traditional materials like cedar and stone alongside modern elements.</p>
             
-            <p>The commercial center includes:</p>
+            <p tabindex="0">The commercial center includes:</p>
             <ul>
-              <li>200 Indigenous-owned businesses ranging from tech startups to traditional crafts</li>
-              <li>50,000 sq ft Indigenous food hall featuring traditional foods from across Turtle Island</li>
-              <li>300,000 sq ft office space (95% occupied) including Treaty One Nation offices</li>
-              <li>150-room boutique hotel with Indigenous cultural programming</li>
-              <li>State-of-the-art conference center hosting national Indigenous gatherings</li>
-              <li>Indigenous arts market with 50 permanent vendor spaces</li>
+              <li tabindex="0">200 Indigenous-owned businesses ranging from tech startups to traditional crafts</li>
+              <li tabindex="0">50,000 sq ft Indigenous food hall featuring traditional foods from across Turtle Island</li>
+              <li tabindex="0">300,000 sq ft office space (95% occupied) including Treaty One Nation offices</li>
+              <li tabindex="0">150-room boutique hotel with Indigenous cultural programming</li>
+              <li tabindex="0">State-of-the-art conference center hosting national Indigenous gatherings</li>
+              <li tabindex="0">Indigenous arts market with 50 permanent vendor spaces</li>
             </ul>
             
-            <p>The commercial district has become a regional destination, attracting over 1 million visitors annually who come to experience authentic Indigenous commerce, cuisine, and culture. Special business incubator programs have helped launch over 75 new Indigenous-owned businesses in the past two years alone, creating a vibrant entrepreneurial ecosystem.</p>
+            <p tabindex="0">The commercial district has become a regional destination, attracting over 1 million visitors annually who come to experience authentic Indigenous commerce, cuisine, and culture. Special business incubator programs have helped launch over 75 new Indigenous-owned businesses in the past two years alone, creating a vibrant entrepreneurial ecosystem.</p>
             
-            <p class="source">Source: Naawi-Oodena Commercial Report (2025)</p>
+            <p class="source" tabindex="0">Source: Naawi-Oodena Commercial Report (2025)</p>
           </div>
         </div>
         
-        <div class="development-highlight">
+        <div class="development-highlight" tabindex="0">
           <img style="width: 900px;" src="img/cityground.png" 
-     alt="Cultural center and gathering space" 
-     class="development-img hover-zoom">
-          <div>
-            <h3>Vibrant Community Spaces</h3>
-            <p>Our completed cultural and community facilities serve as the heart of Naawi-Oodena, providing spaces for learning, celebration, and connection. These spaces were designed through extensive community consultation to ensure they meet the needs of all residents while honoring traditional ways of gathering. The community spaces incorporate Indigenous knowledge about spatial relationships and ceremonial needs.</p>
+               alt="Cultural center and gathering space" 
+               class="development-img hover-zoom" tabindex="0">
+          <div tabindex="0">
+            <h3 tabindex="0">Vibrant Community Spaces</h3>
+            <p tabindex="0">Our completed cultural and community facilities serve as the heart of Naawi-Oodena, providing spaces for learning, celebration, and connection. These spaces were designed through extensive community consultation to ensure they meet the needs of all residents while honoring traditional ways of gathering. The community spaces incorporate Indigenous knowledge about spatial relationships and ceremonial needs.</p>
             
-            <p>Key community assets include:</p>
+            <p tabindex="0">Key community assets include:</p>
             <ul>
-              <li>35,000 sq ft Indigenous Cultural Centre with museum, archives, and language nests</li>
-              <li>Central Gathering Plaza hosting 200+ annual events including powwows and ceremonies</li>
-              <li>20 acres of completed parks and trails with interpretive signage in multiple Indigenous languages</li>
-              <li>K-12 school with 800 students learning both Western and Indigenous knowledge systems</li>
-              <li>Recreation complex with aquatic center, gymnasium, and traditional games area</li>
-              <li>Healing center offering traditional and Western health services</li>
-              <li>Four ceremonial grounds for seasonal celebrations and spiritual practices</li>
+              <li tabindex="0">35,000 sq ft Indigenous Cultural Centre with museum, archives, and language nests</li>
+              <li tabindex="0">Central Gathering Plaza hosting 200+ annual events including powwows and ceremonies</li>
+              <li tabindex="0">20 acres of completed parks and trails with interpretive signage in multiple Indigenous languages</li>
+              <li tabindex="0">K-12 school with 800 students learning both Western and Indigenous knowledge systems</li>
+              <li tabindex="0">Recreation complex with aquatic center, gymnasium, and traditional games area</li>
+              <li tabindex="0">Healing center offering traditional and Western health services</li>
+              <li tabindex="0">Four ceremonial grounds for seasonal celebrations and spiritual practices</li>
             </ul>
             
-            <p>The community spaces have become hubs of cultural revitalization, with daily language classes, traditional craft workshops, and intergenerational knowledge sharing. The design of these spaces incorporates sacred geometry and traditional architectural elements like circular forms and east-facing entrances, creating environments that feel authentically Indigenous while serving modern community needs.</p>
+            <p tabindex="0">The community spaces have become hubs of cultural revitalization, with daily language classes, traditional craft workshops, and intergenerational knowledge sharing. The design of these spaces incorporates sacred geometry and traditional architectural elements like circular forms and east-facing entrances, creating environments that feel authentically Indigenous while serving modern community needs.</p>
             
-            <p class="source">Source: Naawi-Oodena Community Report (2025)</p>
+            <p class="source" tabindex="0">Source: Naawi-Oodena Community Report (2025)</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Sustainability Achievements -->
-    <section class="section">
+    <section class="section" tabindex="0">
       <div class="container">
-        <h2 class="text-center">Sustainability Achievements</h2>
+        <h2 class="text-center" tabindex="0">Sustainability Achievements</h2>
         <div class="grid-2-col">
-          <div>
-            <h3>Environmental Milestones</h3>
-            <p>Naawi-Oodena has achieved its ambitious sustainability goals, creating what experts are calling a new standard for Indigenous-led ecological urban design. The development's environmental approach is rooted in traditional Indigenous values of stewardship and reciprocity with the natural world. The sustainability features were developed through collaboration between Indigenous knowledge keepers and leading environmental engineers.</p>
+          <div tabindex="0">
+            <h3 tabindex="0">Environmental Milestones</h3>
+            <p tabindex="0">Naawi-Oodena has achieved its ambitious sustainability goals, creating what experts are calling a new standard for Indigenous-led ecological urban design. The development's environmental approach is rooted in traditional Indigenous values of stewardship and reciprocity with the natural world. The sustainability features were developed through collaboration between Indigenous knowledge keepers and leading environmental engineers.</p>
             
-            <p>Key achievements include:</p>
+            <p tabindex="0">Key achievements include:</p>
             <ul>
-              <li>LEED Gold certification for all major buildings, with three structures achieving Platinum</li>
-              <li>100% renewable energy since 2024 through a combination of solar, geothermal, and purchased wind power</li>
-              <li>90% waste diversion from landfill through comprehensive composting and recycling programs</li>
-              <li>45% tree canopy coverage (exceeding target) with over 5,000 native trees planted</li>
-              <li>Geothermal district heating system serving all buildings, reducing emissions by 75%</li>
-              <li>Innovative stormwater management using traditional Indigenous techniques combined with modern technology</li>
-              <li>Urban agriculture program producing 15% of community's fresh vegetable needs</li>
-              <li>Dark sky compliant lighting to protect nocturnal ecosystems and traditional star knowledge</li>
+              <li tabindex="0">LEED Gold certification for all major buildings, with three structures achieving Platinum</li>
+              <li tabindex="0">100% renewable energy since 2024 through a combination of solar, geothermal, and purchased wind power</li>
+              <li tabindex="0">90% waste diversion from landfill through comprehensive composting and recycling programs</li>
+              <li tabindex="0">45% tree canopy coverage (exceeding target) with over 5,000 native trees planted</li>
+              <li tabindex="0">Geothermal district heating system serving all buildings, reducing emissions by 75%</li>
+              <li tabindex="0">Innovative stormwater management using traditional Indigenous techniques combined with modern technology</li>
+              <li tabindex="0">Urban agriculture program producing 15% of community's fresh vegetable needs</li>
+              <li tabindex="0">Dark sky compliant lighting to protect nocturnal ecosystems and traditional star knowledge</li>
             </ul>
             
-            <p>The community's sustainability features not only reduce environmental impact but also serve as educational tools, with interpretive displays explaining how traditional Indigenous practices inform modern sustainability solutions. Regular workshops teach residents about energy conservation, water stewardship, and sustainable living based on both Indigenous knowledge and Western science.</p>
+            <p tabindex="0">The community's sustainability features not only reduce environmental impact but also serve as educational tools, with interpretive displays explaining how traditional Indigenous practices inform modern sustainability solutions. Regular workshops teach residents about energy conservation, water stewardship, and sustainable living based on both Indigenous knowledge and Western science.</p>
             
-            <p class="source">Source: Naawi-Oodena Sustainability Report (2025)</p>
+            <p class="source" tabindex="0">Source: Naawi-Oodena Sustainability Report (2025)</p>
           </div>
-          <div>
+          <div tabindex="0">
             <img src="img/74eeaddc-5395-4213-9c15-014eb8b56372.png" 
                  alt="Sustainable features of the completed development" 
-                 class="img-rounded">
+                 class="img-rounded" tabindex="0">
           </div>
         </div>
       </div>
     </section>
     
- 
-      
-  <iframe width="600" height="315" src="https://www.youtube.com/embed/VJ2McBhffXY" class="hover-zoom"></iframe>
-  <iframe width="600" height="315" src="https://www.youtube.com/embed/cwM08UJRQR0" class="hover-zoom"></iframe>
-  <iframe width="600" height="315" src="https://www.youtube.com/embed/ODH13-YOeyE" class="hover-zoom"></iframe>
+    <!-- Video Embeds -->
+    <div class="video-container" tabindex="0">
+      <iframe width="600" height="315" src="https://www.youtube.com/embed/VJ2McBhffXY" class="hover-zoom" title="Naawi-Oodena Development Video 1" tabindex="0"></iframe>
+      <iframe width="600" height="315" src="https://www.youtube.com/embed/cwM08UJRQR0" class="hover-zoom" title="Naawi-Oodena Development Video 2" tabindex="0"></iframe>
+      <iframe width="600" height="315" src="https://www.youtube.com/embed/ODH13-YOeyE" class="hover-zoom" title="Naawi-Oodena Development Video 3" tabindex="0"></iframe>
+      <a href="https://www.youtube.com/watch?v=VJ2McBhffXY" target="_blank">Watch Video 1</a>
+    <a href="https://www.youtube.com/watch?v=cwM08UJRQR0" target="_blank">Watch Video 2</a>
+  <a href="https://www.youtube.com/watch?v=ODH13-YOeyE" target="_blank">Watch Video 3</a>
+    </div>
 
-    
     <!-- Community Testimonials -->
-    <section class="section bg-light">
+    <section class="section bg-light" tabindex="0">
       <div class="container">
-        <h2 class="text-center">Living in Naawi-Oodena</h2>
+        <h2 class="text-center" tabindex="0">Living in Naawi-Oodena</h2>
         <div class="testimonial-grid">
-          <div class="testimonial">
-            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah K." class="testimonial-img">
-            <blockquote>
+          <div class="testimonial" tabindex="0">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah K." class="testimonial-img" tabindex="0">
+            <blockquote tabindex="0">
               "Moving to Naawi-Oodena was the best decision for our family. The sense of community here is unlike anything we've experienced before. Our children are growing up learning their language and culture in everyday settings, not just special classes. The green spaces are designed with Indigenous values - they're not just pretty to look at but functional, with berry bushes and medicinal plants we can harvest. What I love most is how the community comes together for seasonal celebrations in the central plaza, keeping our traditions alive in an urban setting."
             </blockquote>
-            <p class="testimonial-author">- Sarah K., Resident since 2024</p>
+            <p class="testimonial-author" tabindex="0">- Sarah K., Resident since 2024</p>
           </div>
-          <div class="testimonial">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="testimonial-img">
-            <blockquote>
+          <div class="testimonial" tabindex="0">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="testimonial-img" tabindex="0">
+            <blockquote tabindex="0">
               "As a small business owner in the commercial district, I've been amazed by the support and foot traffic. The design of the space really encourages community connection - customers often linger to chat in the beautifully designed courtyards. The business association provides incredible support, from helping with marketing to connecting us with sourcing opportunities from other Indigenous businesses. What's special is how the commercial spaces incorporate our cultural values - my restaurant's design includes traditional elements that tell our family's story, and customers appreciate that authenticity. The mix of local residents and visitors from across the region creates a vibrant economic environment."
             </blockquote>
-            <p class="testimonial-author">- Michael T., Business Owner</p>
+            <p class="testimonial-author" tabindex="0">- Michael T., Business Owner</p>
           </div>
-          <div class="testimonial">
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Lisa M." class="testimonial-img">
-            <blockquote>
+          <div class="testimonial" tabindex="0">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Lisa M." class="testimonial-img" tabindex="0">
+            <blockquote tabindex="0">
               "As an urban planner who has studied Indigenous communities across North America, Naawi-Oodena represents a groundbreaking achievement. The way it seamlessly blends traditional Indigenous placemaking with contemporary urban design principles is unparalleled. The circular neighborhood layouts, the integration of natural systems, the emphasis on communal spaces - these aren't just aesthetic choices but represent a fundamentally different approach to urban living. What's most impressive is how the community has maintained its cultural integrity while creating a fully functional modern neighborhood. This project is already influencing urban design approaches in cities worldwide."
             </blockquote>
-            <p class="testimonial-author">- Dr. Lisa M., Urban Planning Professor</p>
+            <p class="testimonial-author" tabindex="0">- Dr. Lisa M., Urban Planning Professor</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="section bg-primary text-white">
+    <section class="section bg-primary text-white" tabindex="0">
       <div class="container text-center">
-        <h2>Experience Naawi-Oodena Today</h2>
-        <p class="mb-lg">Visit Canada's most innovative Indigenous-led urban community and see firsthand how this groundbreaking development is redefining urban living while honoring ancient traditions. Whether you're interested in becoming a resident, establishing a business, or simply learning about this model of Indigenous-led development, we welcome you to experience the vibrant community that has become a national benchmark for reconciliation through urban design.</p>
+        <h2 tabindex="0">Experience Naawi-Oodena Today</h2>
+        <p class="mb-lg" tabindex="0">Visit Canada's most innovative Indigenous-led urban community and see firsthand how this groundbreaking development is redefining urban living while honoring ancient traditions. Whether you're interested in becoming a resident, establishing a business, or simply learning about this model of Indigenous-led development, we welcome you to experience the vibrant community that has become a national benchmark for reconciliation through urban design.</p>
         <div class="cta-buttons">
-          <a href="contact.html" class="btn btn-accent">Schedule a Tour</a>
-          <a href="residential.html" class="btn btn-secondary">Explore Housing Options</a>
+          <a href="contact.html" class="btn btn-accent" tabindex="1">Schedule a Tour</a>
+          <a href="residential.html" class="btn btn-secondary" tabindex="1">Explore Housing Options</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Site Footer -->
+  <footer class="site-footer" tabindex="0">
     <div class="container text-center">
-      <p>&copy; 2025 Naawi-Oodena. All rights reserved.</p>
+      <p tabindex="0">&copy; 2025 Naawi-Oodena. All rights reserved.</p>
     </div>
   </footer>
 </body>
