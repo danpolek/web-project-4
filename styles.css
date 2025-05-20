@@ -89,26 +89,12 @@ body {
   color: var(--dark); /* Use palette color */
   background-color: var(--secondary);
   background-image: url(img/darkkids.png);
-  overflow-x: hidden;
+  background: linear-gradient(0deg, var(--secondary) 0%, var(--light) 100%);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-/* =========================
-   ACCESSIBILITY: SKIP LINK
-   ========================= */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--accent);
-  color: var(--dark);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  z-index: 100;
-  transition: top 0.3s ease;
-  font-weight: 600;
-}
-.skip-link:focus {
-  top: 0;
-}
+
 
 /* =========================
    TYPOGRAPHY
@@ -344,12 +330,6 @@ strong {
   /* Show hamburger menu on mobile */
   .menu-toggle {
     display: block;
-  }
-  /* Hide nav links by default on mobile */
-  .primary-nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
   }
   /* Show nav links when nav is active */
   .primary-nav.active ul {
