@@ -16,6 +16,30 @@
       padding: 20px;
       border-radius: 20px;
     }
+    /* Community Amenities Grid */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.amenity-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--box-shadow, 0 2px 8px rgba(0,0,0,0.08));
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.amenity-card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+.amenity-card img {
+  width: 100%;
+  max-width: 120px;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
   </style>
 </head>
 
@@ -57,6 +81,35 @@
           <div>
             <img src="img/residential-overview.jpg" alt="Overview of Naawi-Oodena residential area" class="img-rounded" tabindex="0">
             <p class="source" tabindex="0">Image: Aerial view of residential area (Source: Treaty One Development Corporation, 2025)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" tabindex="0">
+      <div class="container">
+        <h2 class="text-center" tabindex="0">Community Amenities</h2>
+        <p class="text-center intro-text" tabindex="0">
+          Residents enjoy a wide range of amenities designed for wellness, culture, and connection.
+        </p>
+        <div class="amenities-grid">
+          <div class="amenity-card" tabindex="0">
+            <h3 tabindex="0">Central Park</h3>
+            <p tabindex="0">A large green space for gatherings, ceremonies, and recreation.</p>
+          </div>
+          <div class="amenity-card" tabindex="0">
+ 
+            <h3 tabindex="0">Recreation Centre</h3>
+            <p tabindex="0">Fitness, sports, and wellness programs for all ages.</p>
+          </div>
+          <div class="amenity-card" tabindex="0">
+  
+            <h3 tabindex="0">Public Art</h3>
+            <p tabindex="0">Murals and sculptures celebrating Indigenous stories and artists.</p>
+          </div>
+          <div class="amenity-card" tabindex="0">
+   
+            <h3 tabindex="0">Community Garden</h3>
+            <p tabindex="0">Grow traditional medicines and fresh food together.</p>
           </div>
         </div>
       </div>
